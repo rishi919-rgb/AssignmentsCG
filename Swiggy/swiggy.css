@@ -243,8 +243,8 @@ p{
 }
 .pp{
     margin-right: 30px;
-    box-shadow: 2px 2px 5px;
-    border-radius: 20px;
+    /* box-shadow: 2px 2px 5px; */
+    /* border-radius: 20px; */
     align-items: center;
 }
 .bulll{
@@ -326,7 +326,7 @@ p{
 }
 .ppp{
     margin-right: 30px;
-    box-shadow: 2px 2px 5px;
+    /* box-shadow: 2px 2px 5px; */
     border-radius: 20px;
     align-items: center;
 }
@@ -349,7 +349,7 @@ p{
     height: 200px;
     background-size: 100% 100%;
     margin-left: 41px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* align-items: end; */
     margin-top: 20px;
 }
