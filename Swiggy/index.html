@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="swiggy.css">
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="loc">
+            <div class="logo"></div>
+            <div class="par">
+                <div class="para">
+                    <p>Add your location</p>
+                </div>
+                <div class="para2">
+                    <p>To see items in your area</p>
+                </div>
+            </div>
+        </div>
+        <div class="profile"></div>
+    </div>
+    <div class="searchbar"><input type="search" name="" id="srch" placeholder="Search for Cookies"></div>
+    <div class="bg">
+        <div class="back">
+            <div class="flow"><img
+                    src="data:image/webp;base64,UklGRlgFAABXRUJQVlA4WAoAAAAQAAAASwAASQAAQUxQSJsBAAABkFXbVh1ZRwISjgQkICES4uDioHGQckA5iAQkRAISjoT9EeCGTT//ImIC5O/eheQ/i1AML/c5hAogyqeoBQCKfIq+4r59Cpuh6T8Db2jrJ6AV3dByZMc+lNGPrRqpFHHEY/DVuuCZMsrIOZJ7hUgB5J5itLQMcDwZAOoR3G1/4B+Anafe7laO7fwv9wEAiSbg+aKxoJlp0gRDn+c9YZSnUCSOEE+jiAR6GFjDNHeA2M3yFcSXTPYG5testPloPDrrrpUlC6U3jqocEjmCsBaGXWjVptkmxMesosIbCubWIMQHphfPk8GYleQDnFUpFKy2MWQaIMxTEJtOy0yoblalwjEpgFznRJSUClGZ895FRLTSwE1x0k4kNc0Z1POxdF4GoF45qvDGp3ZZ8ngqLaF4Oi+RPpXrsdcKisfjCuG5sEJ8rMqKaSiVkbzaW8KILvYWkbOXZMm99xIR0U6VNX0nSrM0TBcRu9Ug7dSIsuoJoKp0yy3JsgHALt0NAKIsbDDpegNqkJUjSscZSnKy9tUTdbJ8sN6nuH0qP0kAVlA4IJYDAAAwFwCdASpMAEoAPm0wlEckIyIhKlYLSIANiWQA0ifoeq8hlqV3aybPmn5gN4n6THmA/W79buwB6AH7b9YB6AHmef6z9wPgI/cz0nc0U/oHaB321q3QK1e6/TQVTY8z3tOxq4E4lZrOL6gpC4mnrCCSnfsjSc9mJ4apkVLXscZ4E/0CHcxZ+XaiEVQ1rMttEPIiBNjPcUXxC+BvBj4M/p78b705Girl+I8Z9fVFCA+3wtsrH8CItW8BCXAu+uZWJsogAAD+/gbV9V5EfUXMvsfTS2w29NGz4oWEas3CxWnYbWpi9bz+AIpK/pXDTnNxSmRHccjonuHlZWFyo+nJnRNboriqP/txB+doJfPsFaK4SLg58UiqPjvVaIJbCnSPsqbl1f8J5NxUHyKXP8zCf/466+8QUg2YC1hXJ24K2DGzqalvaYsQ+JM1CM9FwRK5nZx9ByLa9+RRnX8WViANXKBbPhxH1KFBjJD6VDmB/63CwLfQXmfBSNsyEDcI8cwl28Qdhskh7EQnb+fPuWc2Utf+4Z9x3MEN/eEQugelQ8kgQ1ZXMzBTlKvlhyC/pHyVPLY4dQnadeb3n1GwdzVVeV1hMp3eb5zXC0x42i/FY3gES897CTdrTWSkMpJgmsK0R6ADnVy3MsQM+Hkqg2DxTHye2UAJ+/+Ru9BuHr67qmztUPpIxTPZxkFHDz/yyRibQKZlll2PZbuBXk3Rbq6oxPtypJoRhi2A9IugUHIM5GiGmkf1i0ArQxWWz/1WBHQF9z3ItqphKm7AypbCoL2W/mvIjYADiguaKdPMNHou7XImQCIjkEVY7JGOkbG9hsbNwAq3ugIOk4OkKiGTcp5/558fWcf5/7ms3Xh2DWXmCmmimGKtk0Kj9s88kBtzYyOj/SEx1yuE+1Jj7je2KTK3bjIsL4QmTGMWPgH61jorgiTv4BTK6f59xhM9be2I+tiBYC/ew8idxIsN/SZ1ukd+K2rVhH+6x2q6a113+AbPWIyaumf6DJ37f8l6lRR76p1bY2ZVb+m+mtLuhGMaEB23i5b2/DdOjnfZ2IX0Fl4k95Lwv/YjWG0vBF80aGPpDFWMXC6K/XBwzU2xeQKAzIeIrVY9d2pFxz/ufyHdD6RwREdcBIt2gU8nwCtALoz0bR87LA1IYzxQkIAaxbYwZd6STT79XkdC7brd+vGrAoy5aEmnBjBBob2PS7incSj01S5fQ4gZk5AAAAA="
+                    alt="">
+            </div>
+            <div class="bg2"><img
+                    src="data:image/webp;base64,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"
+                    alt=""></div>
+            <di class="flow"><img
+                    src="data:image/webp;base64,UklGRlgFAABXRUJQVlA4WAoAAAAQAAAASwAASQAAQUxQSJsBAAABkFXbVh1ZRwISjgQkICES4uDioHGQckA5iAQkRAISjoT9EeCGTT//ImIC5O/eheQ/i1AML/c5hAogyqeoBQCKfIq+4r59Cpuh6T8Db2jrJ6AV3dByZMc+lNGPrRqpFHHEY/DVuuCZMsrIOZJ7hUgB5J5itLQMcDwZAOoR3G1/4B+Anafe7laO7fwv9wEAiSbg+aKxoJlp0gRDn+c9YZSnUCSOEE+jiAR6GFjDNHeA2M3yFcSXTPYG5testPloPDrrrpUlC6U3jqocEjmCsBaGXWjVptkmxMesosIbCubWIMQHphfPk8GYleQDnFUpFKy2MWQaIMxTEJtOy0yoblalwjEpgFznRJSUClGZ895FRLTSwE1x0k4kNc0Z1POxdF4GoF45qvDGp3ZZ8ngqLaF4Oi+RPpXrsdcKisfjCuG5sEJ8rMqKaSiVkbzaW8KILvYWkbOXZMm99xIR0U6VNX0nSrM0TBcRu9Ug7dSIsuoJoKp0yy3JsgHALt0NAKIsbDDpegNqkJUjSscZSnKy9tUTdbJ8sN6nuH0qP0kAVlA4IJYDAAAwFwCdASpMAEoAPm0wlEckIyIhKlYLSIANiWQA0ifoeq8hlqV3aybPmn5gN4n6THmA/W79buwB6AH7b9YB6AHmef6z9wPgI/cz0nc0U/oHaB321q3QK1e6/TQVTY8z3tOxq4E4lZrOL6gpC4mnrCCSnfsjSc9mJ4apkVLXscZ4E/0CHcxZ+XaiEVQ1rMttEPIiBNjPcUXxC+BvBj4M/p78b705Girl+I8Z9fVFCA+3wtsrH8CItW8BCXAu+uZWJsogAAD+/gbV9V5EfUXMvsfTS2w29NGz4oWEas3CxWnYbWpi9bz+AIpK/pXDTnNxSmRHccjonuHlZWFyo+nJnRNboriqP/txB+doJfPsFaK4SLg58UiqPjvVaIJbCnSPsqbl1f8J5NxUHyKXP8zCf/466+8QUg2YC1hXJ24K2DGzqalvaYsQ+JM1CM9FwRK5nZx9ByLa9+RRnX8WViANXKBbPhxH1KFBjJD6VDmB/63CwLfQXmfBSNsyEDcI8cwl28Qdhskh7EQnb+fPuWc2Utf+4Z9x3MEN/eEQugelQ8kgQ1ZXMzBTlKvlhyC/pHyVPLY4dQnadeb3n1GwdzVVeV1hMp3eb5zXC0x42i/FY3gES897CTdrTWSkMpJgmsK0R6ADnVy3MsQM+Hkqg2DxTHye2UAJ+/+Ru9BuHr67qmztUPpIxTPZxkFHDz/yyRibQKZlll2PZbuBXk3Rbq6oxPtypJoRhi2A9IugUHIM5GiGmkf1i0ArQxWWz/1WBHQF9z3ItqphKm7AypbCoL2W/mvIjYADiguaKdPMNHou7XImQCIjkEVY7JGOkbG9hsbNwAq3ugIOk4OkKiGTcp5/558fWcf5/7ms3Xh2DWXmCmmimGKtk0Kj9s88kBtzYyOj/SEx1yuE+1Jj7je2KTK3bjIsL4QmTGMWPgH61jorgiTv4BTK6f59xhM9be2I+tiBYC/ew8idxIsN/SZ1ukd+K2rVhH+6x2q6a113+AbPWIyaumf6DJ37f8l6lRR76p1bY2ZVb+m+mtLuhGMaEB23i5b2/DdOjnfZ2IX0Fl4k95Lwv/YjWG0vBF80aGPpDFWMXC6K/XBwzU2xeQKAzIeIrVY9d2pFxz/ufyHdD6RwREdcBIt2gU8nwCtALoz0bR87LA1IYzxQkIAaxbYwZd6STT79XkdC7brd+vGrAoy5aEmnBjBBob2PS7incSj01S5fQ4gZk5AAAAA="
+                    alt=""></di>
+        </div>
+        <div class="back2">
+            <div class="fresh lo"></div>
+            <div class="coke lo"></div>
+            <div class="ceta lo"></div>
+            <div class="mobi lo"></div>
+            <div class="mont lo"></div>
+            <div class="home lo"></div>
+            <div class="beauty lo"></div>
+            <div class="baby lo"></div>
+            <div class="clean lo"></div>
+            <div class="toys lo"></div>
+            <div class="health lo"></div>
+        </div>
+    </div>
+    <div class="secbar">
+        <div class="bulll pp">
+            <div class="bull bu"></div>
+            <div>
+                <p>Red Bull <br> <br> $180 <del>$200</del> </p>
+            </div>
+
+        </div>
+        <div class="nakk pp">
+            <div class="nak bu"></div>
+            <div>
+                <p style="text-align: center;">Pea protien <br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+        <div class="tendd pp">
+            <div class="tend bu"></div>
+            <div>
+                <p style="text-align: center;">Pure drink <br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+        <div class="puree pp">
+            <div class="pure bu"></div>
+            <div>
+                <p style="text-align: center;">Cat Food <br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+        <div class="cartoo pp">
+            <div class="carto bu"></div>
+            <div>
+                <p style="text-align: center;">Pea protien <br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+        <div class="fishh pp">
+            <div class="fish bu"></div>
+            <div>
+                <p style="text-align: center;">Colgate <br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+        <div class="pepsii pp">
+            <div class="pepsi bu"></div>
+            <div>
+                <p style="text-align: center;">Pepsii<br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+        <div class="gncc pp">
+            <div class="gnc bu"></div>
+            <div>
+                <p style="text-align: center;">Whey Protien <br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+
+    </div>
+    <div class="secbar2">
+        <div class="bulll2 ppp">
+            <div class="bull2 bu2"></div>
+            <div>
+                <p>Onions <br> <br> $180 <del>$200</del> </p>
+            </div>
+
+        </div>
+        <div class="nakk2 ppp">
+            <div class="nak2 bu2"></div>
+            <div>
+                <p style="text-align: center;">Pop Corn <br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+        <div class="tendd2 ppp">
+            <div class="tend2 bu2"></div>
+            <div>
+                <p style="text-align: center;">Pure drink <br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+        <div class="puree2 ppp">
+            <div class="pure2 bu2"></div>
+            <div>
+                <p style="text-align: center;">Bananas Riped<br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+        <div class="cartoo2 ppp">
+            <div class="carto2 bu2"></div>
+            <div>
+                <p style="text-align: center;">Boat Speaker <br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+        <div class="fishh2 ppp">
+            <div class="fish2 bu2"></div>
+            <div>
+                <p style="text-align: center;">Green Chilly <br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+        <div class="pepsii2 ppp">
+            <div class="pepsi2 bu2"></div>
+            <div>
+                <p style="text-align: center;">Packed Eggs<br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+        <div class="gncc2 ppp">
+            <div class="gnc2 bu2"></div>
+            <div>
+                <p style="text-align: center;">Boat buds <br> top quality <br> <br> $180 <del>$200</del></p>
+            </div>
+        </div>
+    </div>
+    <div class="bg3"></div>
+    <div class="para3">
+        <p>Grocery & Kitchen</p>
+    </div>
+    <div class="grow">
+        <div class="fre">
+            <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/1d02b229-f988-413a-bfb4-ba16aaea132f_7bd1dcf3-47bb-4db9-ba00-21ed735b05ee"
+                alt="">
+            <div></div>
+            <h4>Fresh Vegetables</h4>
+        </div>
+        <div class="fre">
+            <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/9a72e7dc-8a85-4287-b367-b3b28b1980d5_66dca255-1c06-4212-b318-76f3223bf240"
+                alt="">
+            <div>
+                <h4>Fresh Fruits</h4>
+            </div>
+        </div>
+        <div class="fre">
+            <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/27456e9b-78fc-43e7-98cf-ece34a220f31_7289e22b-b60e-43ad-bd29-5d011bbb6d4c"
+                alt="">
+            <div>
+                <h4>Fresh Dairy</h4>
+            </div>
+        </div>
+        <div class="fre">
+            <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/e008e35c-ef37-462f-927f-b074ba543c91_78c8d4f1-c1c7-4f91-80cb-fe61afd3a2c2"
+                alt="">
+            <div>
+                <h4>Fresh Cereals</h4>
+            </div>
+        </div>
+        <div class="fre">
+            <img src="hhttps://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/caf1a2ce-8fd4-4151-8695-bd5b37651a2f_43673e5c-57b2-4610-b41e-57cb1a61d693"
+                alt="">
+            <div><h4></h4></div></div>
+            <div class="fre">
+                <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/9e119d7a-9d85-4ef8-b3b6-9161b671ec17_285e08fb-6556-41dc-828f-448b50e50771"
+                    alt="">
+                <div>
+                    <h4>Fresh Masalas</h4>
+                </div>
+            </div>
+            <div class="fre">
+   <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/9a72e7dc-8a85-4287-b367-b3b28b1980d5_66dca255-1c06-4212-b318-76f3223bf240" alt="">
+              <div><h4>Fresh Fruits</h4></div></div>
+
+              <div class="fre">
+   <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/e0ae4c50-d5b4-44c5-b51c-30be09c96e15_1245ab1c-d2f9-43a9-af41-495f6747a3f7" alt="">
+              <div><h4>Fresh Teas</h4></div></div>
+
+              <div class="fre">
+   <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/f4df8765-a090-4c0c-8a19-a2a4e352be63_5804cbb6-16a4-462b-a9b3-1171a48389b0" alt="">
+              <div><h4>Fresh Sauces</h4></div></div>
+
+              <div class="fre">
+   <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/ba9ea8ae-00f8-4538-9763-d33455cf93bc_5d164125-ba13-4896-9135-f976571bd8bf" alt="">
+              <div><h4>Fresh Chicken</h4></div></div>
+
+              <div class="fre">
+   <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/5b30bb37-0c7c-4a6a-8af2-4d8551fc62b4_3d652fd7-fafc-4378-b6f2-5d6f74cdd670" alt="">
+              <div><h4>Fresh Dry Fruits</h4></div></div>
+
+        </div>
+        </div>
+         <div class="para3">
+        <p>Grocery & Kitchen</p>
+    </div>
+    <div class="grow">
+        <div class="fre">
+            <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/55a6484d-7f8c-4f47-8df3-c7924114f0e2_8cbb020c-9d9d-4432-bf61-05f9e954a97b"
+                alt="">
+            <div></div>
+            <h4>Fresh Vegetables</h4>
+        </div>
+        <div class="fre">
+            <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/518933e0-fc92-4971-88cb-5decb27580da_447c21dd-3544-4c41-af6c-07f642260817"
+                alt="">
+            <div>
+                <h4>Fresh Fruits</h4>
+            </div>
+        </div>
+        <div class="fre">
+            <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/ba2bbcd1-7efa-44bd-b7b7-cf323cb94405_f26b5158-b6af-4a2b-90f6-04af5a6b432f"
+                alt="">
+            <div>
+                <h4>Fresh Dairy</h4>
+            </div>
+        </div>
+        <div class="fre">
+            <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/6d1338a4-8075-412b-b8c7-1139cecc3c36_8348d98c-7ebc-48e3-9d8d-51dc5baec0e3"
+                alt="">
+            <div>
+                <h4>Fresh Cereals</h4>
+            </div>
+        </div>
+        <div class="fre">
+            <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/72cc27f9-f2b0-471e-bb4b-631f781a0a55_264e3560-e040-4987-9ac9-4ef067ac039a"
+                alt="">
+            <div><h4>Fresh Maggies</h4></div></div>
+            <div class="fre">
+                <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/d680e76e-0c59-438e-a677-15852a7ac5c8_0c8c8728-d36d-4b0a-b089-ce6e7e04c12e"
+                    alt="">
+                <div>
+                    <h4>Fresh Masalas</h4>
+                </div>
+            </div>
+            <div class="fre">
+   <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/d92aa188-bf7e-4190-8b27-abf1d7f2e963_fe90dc16-7866-4f7c-b86e-3f46ef48c829" alt="">
+              <div><h4>Fresh Fruits</h4></div></div>
+
+              <div class="fre">
+   <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/e0ae4c50-d5b4-44c5-b51c-30be09c96e15_1245ab1c-d2f9-43a9-af41-495f6747a3f7" alt="">
+              <div><h4>Fresh Teas</h4></div></div>
+
+              <div class="fre">
+   <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/f4df8765-a090-4c0c-8a19-a2a4e352be63_5804cbb6-16a4-462b-a9b3-1171a48389b0" alt="">
+              <div><h4>Fresh Sauces</h4></div></div>
+
+              <div class="fre">
+   <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/ba9ea8ae-00f8-4538-9763-d33455cf93bc_5d164125-ba13-4896-9135-f976571bd8bf" alt="">
+              <div><h4>Fresh Chicken</h4></div></div>
+
+              <div class="fre">
+   <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/9/19/3e3be51a-cdcc-4e81-88be-770452454a1d_f77855ee-7312-4b15-ae55-c5f8c605d94e" alt="">
+              <div><h4>Fresh Dry Fruits</h4></div></div>
+
+        </div>
+        </div>
+</body>
+
+</html>
