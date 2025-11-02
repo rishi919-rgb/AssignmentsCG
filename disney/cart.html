@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+
+
+        .main {
+            width: 100%;
+            box-shadow: 0 .0vw 1vw rgba(0, 0, 0, .45);
+        }
+
+
+        .visit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.7vw;
+            padding: 0.3vw 1vw;
+            flex-wrap: wrap;
+            gap: 1vw;
+        }
+
+
+
+        .cruise {
+            display: flex;
+            justify-content: center;
+            gap: 1.5vw;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 1vw;
+            padding: .7vw 0;
+
+        }
+
+        .cruise img {
+            width: 14vw;
+            height: auto;
+        }
+
+        .cruise p {
+            margin: 0;
+            cursor: pointer;
+        }
+
+        #srch {
+            width: 12vw;
+            border-radius: 0.4vw;
+            height: 3vh;
+            font-size: 1vw;
+            border: 1px solid #ccc;
+            padding: 0.2vw 0.5vw;
+        }
+
+        #srch::placeholder {
+            color: gray;
+            font-size: 0.9vw;
+        }
+
+        /* HOVERRRRRR */
+        .cruise p:hover {
+            color: rgb(5, 182, 253);
+        }
+
+        .visit p:last-child {
+            color: rgb(5, 182, 253);
+        }
+
+        .find {
+            background-color: rgb(0, 179, 255);
+            width: 15vw;
+            height: 5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-left: 41vw;
+
+        }
+
+        .find p {
+            font-size: 1.3vw;
+            font-weight: 600;
+        }
+        .mid{
+            height: 25vh;
+        }
+           .big {
+            display: flex;
+            margin: 4vw;
+            width: 60vw;
+            margin-left: 20vw;
+        }
+
+        .small {
+            font-size: .8vw;
+            width: 20vw;
+
+        }
+
+        .small p {
+            margin-bottom: .9vw;
+        }
+
+        .he {
+            font-weight: bold;
+            font-size: .9vw;
+            margin-top: 3vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="visit">
+            <p style="color: grey; margin-right:25vw ;">Visit Disney.com</p>
+            <a href="login.html" style="text-decoration: none;">
+                <p style="color: rgb(5, 182, 253);">Log in or Create Account</p>
+            </a>
+            <p style="color: rgb(5, 182, 253);">🌐 India (English)</p>
+            <input type="search" name="srch" id="srch" placeholder="🔍 search disneycruise.com">
+        </div>
+
+        <div class="cruise">
+            <img src="https://cdn1.parksmedia.wdprapps.disney.com/media/layout/syndicated/prod/assets/logos/dcl.svg"
+                alt="Disney Cruise Line Logo">
+            <p>Cruise with Disney</p>
+            <p>Our Ships</p>
+            <p>Destinations</p>
+            <p>Plan a Cruise</p>
+            <p>Already Booked</p>
+            <p>Help</p>
+            <p style="display: flex; align-items: center; gap: 0.3vw;">
+                <img src="https://cdn1.parksmedia.wdprapps.disney.com/media/layout/assets/icons/pep/cart-empty.svg"
+                    alt="Cart" style="width: 1.2vw; height: auto;">
+                Cart
+            </p>
+        </div>
+    </div>
+    <div class="mid">
+        <p style="margin-left: 38.6vw; margin-top: 30vh; font-size: 2.4vw; margin-bottom: 2vw;">Your Cart is Empty</p>
+        <div class="find">
+            <p>Find a Cruise</p>
+        </div>
+    </div><hr style="color: grey;">
+      <div class="para">
+            <p style="font-weight: bold; margin-top: 3vh; margin-bottom: 4vh; text-align: center;">Contact Disney Cruise Line</p>
+            <p style="margin: 3.5vh;text-align: center; ">Have a question or need assistance? Call us at <span style="color: #1268B3;text-align: center;">+91
+                    80357-38899.</span>
+            </p>
+            <p style="margin-bottom: 3.5vh;text-align: center;">Cast Members are available to help you 7 days a week, Monday through
+                Friday, 8:00 AM to 10:00 PM IST;
+                Saturday and Sunday, 9:00 AM to 8:00 PM IST.
+            </p>
+            <p style="color: grey;text-align: center; font-size: .7vw;">Guests younger than 18 years of age must have parent or guardian
+                permission to call. International call rates apply. Cost may vary according to network.</p>
+            <hr style="   color: grey; margin-top: 5vh;">
+        </div>
+        <div class="big">
+            <div class="small">
+                <p class="he">Things to Do</p>
+                <p>Onboard Activities</p>
+                <p>Character Experiences</p>
+                <p>Deck Parties</p>
+                <p>Dining</p>
+                <p>Live Shows & Entertainment</p>
+                <p>Nightclubs & Lounges</p>
+                <p>Spa & Fitness</p>
+                <p>Youth Clubs</p>
+                <p>Pools</p>
+                <p>Disney Uncharted Adventure</p>
+
+                <p class="he">Ships</p>
+                <p>Disney Adventure</p>
+                <p>Disney Destiny</p>
+                <p>Disney Dream</p>
+                <p>Disney Fantasy</p>
+                <p>Disney Magic</p>
+                <p>Disney treasure</p>
+                <p>Disney Wish</p>
+                <p>Disney Wonder</p>
+            </div>
+            <div class="small">
+                <p class="he">Staterooms</p>
+                <p>Disney Adventure Staterooms</p>
+                <p>Disney Destiny Staterooms</p>
+                <p>Disney Dream Staterooms</p>
+                <p>Disney Fantasy Staterooms</p>
+                <p>Disney Magic Staterooms</p>
+                <p>Disney Treasure Staterooms</p>
+                <p>Disney Wish Staterooms</p>
+                <p>Disney Wonder Staterooms</p>
+
+                <p class="he">Cruises & Destinations</p>
+                <p>Find a Cruise</p>
+                <p>Departure Ports</p>
+                <p>Special Offers</p>
+                <p>Land and Sea Vacations</p>
+                <p>Florida Cruises</p>
+                <p>Port Adventures</p>
+                <p>Adventures ny Disney</p>
+                <p>Vacation Packages</p>
+            </div>
+            <div class="small">
+                <p class="he">Interactive Deck Plans</p>
+                <p>Disney Adventure</p>
+                <p>Disney Destiny</p>
+                <p>Disney Dream</p>
+                <p>Disney Fantasy</p>
+                <p>Disney Magic</p>
+                <p>Disney treasure</p>
+                <p>Disney Wish</p>
+                <p>Disney Wonder</p>
+
+                <p class="he">Help</p>
+                <p>Frequently Asked Questions</p>
+                <p>Guest Services</p>
+                <p>planDisney</p>
+                <p>Contact Us</p>
+                <p>Guest with Disbilities</p>
+                <p>Site Map</p>
+                <p>Website Terms & Conditions</p>
+                <p>Booking Terms & Conditions</p>
+                <p>Castaway Club Program Terms & Conditions</p>
+                <p>Safety and Security</p>
+                <p>Disney Cruise Line Vacation Protection Plan</p>
+                <p>Your Key Rights and Financial Protection
+                </p>
+                <p>cruices Contact</p>
+            </div>
+            <div class="small">
+                <p class="he">Plan & Manage</p>
+                <p>My Reservations</p>
+                <p>My Online Check-in</p>
+                <p>My Cruise Actvities</p>
+                <p>Make a Payment</p>
+                <p>Travel Agent Login</p>
+                <p>New to Cruising Tips</p>
+                <p>Paying for your Disney Cruise</p>
+
+                <p class="he">My Account</p>
+                <p>DisneyBand+ &More</p>
+                <p>My Family & friends</p>
+                <p>Castaway Club</p>
+                <p>My Cruice Photos</p>
+                <p>My cruice History and Folio</p>
+
+                <p class="he">Before you Go</p>
+                <p>Disney Cruise Line Navigator App</p>
+                <p>Photography</p>
+                <p>Onboard Gifts</p>
+                <p>Travel documentation</p>
+
+                <p class="he">News & Press</p>
+                <p>Disney Cruise Line News</p>
+                <p>Disney Cruise Line Awards</p>
+                <p>Receive Email Updates</p>
+            </div>
+              <hr style="   color: grey; margin-top: 5vh;">
+        </div>
+    </div>
+</body>
+
+</html>

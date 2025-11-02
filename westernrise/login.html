@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .body {
+            z-index: 1;
+
+        }
+
+        .bg {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            position: relative;
+            /* overflow-x: hidden; */
+        }
+
+        @keyframes scrollText {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .scrol {
+            background-color: darkgreen;
+            height: 3vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: sticky;
+            top: 0vw;
+            width: 100%;
+        }
+
+        .dibba1 {
+            position: absolute;
+            left: 0vw;
+            color: white;
+            display: flex;
+            width: 33vw;
+            gap: 1vw;
+            margin-left: 3vw;
+            margin-top: 1.5vw;
+            filter: brightness(0);
+        }
+        .dibba1 p{
+            font-size: 1vw;
+        }
+
+        .dibba2 {
+            position: absolute;
+            left: 43vw;
+            margin-top: 1.5vw;
+        }
+
+        .dibba2 img {
+            width: 13vw;
+            filter: brightness(0);
+        }
+
+        .dibba3 {
+            position: absolute;
+            left: 75vw;
+            color: white;
+            margin-top: 1.5vw;
+            display: flex;
+            gap: 1vw;
+            margin-left: 10vw;
+        }
+
+        .dibba3 img {
+            filter: brightness(0) invert(0);
+        }
+
+        .login {
+            background-color: rgb(224, 224, 224);
+            width: 30vw;
+            height: 60vh;
+            margin-left: 24vw;
+            margin-top: 10vh;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            padding-left: 10vw;
+            padding-right: 10vw;
+            padding-top: 1vh;
+            margin-bottom: 5vh;
+        }
+        .login p{
+            font-size: 2vw;
+            text-align: center;
+            margin: 5vh;
+            
+        }
+        .login input{
+            width: 80%;
+            padding: 1.5vw;
+            padding-right: 4.2vw;
+           
+            border: 0;
+            margin-bottom: 1vw;
+        }
+        .login a{
+            color: black;
+            font-size: .8vw;
+        }
+         footer {
+            background: #ffffff;
+            padding: 60px 0;
+            border-top: 1px solid #ddd;
+            font-family: sans-serif;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-column h3 {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column p {
+            max-width: 260px;
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+
+        .email-form {
+            margin-top: 20px;
+            display: flex;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+        }
+
+        .email-form input {
+            border: none;
+            outline: none;
+            flex: 1;
+            font-size: 14px;
+        }
+
+        .email-form button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li a {
+            display: block;
+            text-decoration: none;
+            color: #000000;
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.85;
+        }
+
+        .footer-column ul li a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 13px;
+            opacity: 0.6;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="scrol">
+        <p style="background-color: darkgreen; color: white; animation: scrollText 200s linear infinite;   display: inline-block; font-size: 1vw; font-weight: 800;
+            white-space: nowrap; ">•
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;•
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp; •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE
+            GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF
+            &nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;•
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp; •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE
+            GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF
+            &nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;•
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp; •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE
+            GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF
+            &nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;•
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp; •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE
+            GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+
+        <div class="bda">
+            <div class="dibba1">
+                <p>Shop</p>
+                <p>Explore</p>
+                <p>Support</p>
+            </div>
+            <div class="dibba2"><a href="index.html"><img src="https://westernrise.com/cdn/shop/files/logo-white.svg?v=1691760370&width=256"
+                    alt=""></a></div>
+            <div class="dibba3">
+                <p>INR ₹</p>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im0xMi41OTMgMjMuMjU4bC0uMDExLjAwMmwtLjA3MS4wMzVsLS4wMi4wMDRsLS4wMTQtLjAwNGwtLjA3MS0uMDM1cS0uMDE2LS4wMDUtLjAyNC4wMDVsLS4wMDQuMDFsLS4wMTcuNDI4bC4wMDUuMDJsLjAxLjAxM2wuMTA0LjA3NGwuMDE1LjAwNGwuMDEyLS4wMDRsLjEwNC0uMDc0bC4wMTItLjAxNmwuMDA0LS4wMTdsLS4wMTctLjQyN3EtLjAwNC0uMDE2LS4wMTctLjAxOG0uMjY1LS4xMTNsLS4wMTMuMDAybC0uMTg1LjA5M2wtLjAxLjAxbC0uMDAzLjAxMWwuMDE4LjQzbC4wMDUuMDEybC4wMDguMDA3bC4yMDEuMDkzcS4wMTkuMDA1LjAyOS0uMDA4bC4wMDQtLjAxNGwtLjAzNC0uNjE0cS0uMDA1LS4wMTgtLjAyLS4wMjJtLS43MTUuMDAyYS4wMi4wMiAwIDAgMC0uMDI3LjAwNmwtLjAwNi4wMTRsLS4wMzQuNjE0cS4wMDEuMDE4LjAxNy4wMjRsLjAxNS0uMDAybC4yMDEtLjA5M2wuMDEtLjAwOGwuMDA0LS4wMTFsLjAxNy0uNDNsLS4wMDMtLjAxMmwtLjAxLS4wMXoiLz48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Im01LjAzIDEzLjcwMWwuNzEtNS42OWEzIDMgMCAwIDEgMy41NjYtMi41N2MuODU3LjE3MiAxLjgxOC41MiAyLjY5NC41MnMxLjgzNy0uMzQ4IDIuNjk0LS41MmEzIDMgMCAwIDEgMy41NjUgMi41N2wuNzEyIDUuNjlDMjAuMTA3IDEzLjk4NSAyMiAxNC41MzUgMjIgMTZjMCAxLjU5Ni0yLjIxMyAyLjEyMi0zLjQyIDIuMzljLTEuNzE4LjM4Mi00LjA0NC42MS02LjU4LjYxcy00Ljg2Mi0uMjI4LTYuNTgtLjYxQzQuMjEyIDE4LjEyMiAyIDE3LjU5NiAyIDE2YzAtMS40NjUgMS44OTMtMi4wMTUgMy4wMy0yLjI5OU03LjcyNSA4LjI2YTEgMSAwIDAgMSAxLjE4OS0uODU3Yy45OTkuMiAyLjA2LjU1OCAzLjA4Ni41NThzMi4wODctLjM1OCAzLjA4Ni0uNTU4YTEgMSAwIDAgMSAxLjE4OS44NTdsLjYzMSA1LjA1NEMxNS40NjcgMTMuMTEzIDEzLjc4NiAxMyAxMiAxM3MtMy40NjcuMTEzLTQuOTA2LjMxM3ptLTEuODcyIDguMTc5Yy0xLjU1My0uMzQ1LTEuNTUzLS41MzEgMC0uODc2QzcuMzkxIDE1LjIyIDkuNTY1IDE1IDEyIDE1czQuNjA5LjIyIDYuMTQ3LjU2MmMxLjU1My4zNDUgMS41NTMuNTMgMCAuODc2QzE2LjYwOSAxNi43OCAxNC40MzUgMTcgMTIgMTdzLTQuNjA5LS4yMi02LjE0Ny0uNTYyWiIvPjwvZz48L3N2Zz4="
+                    alt="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMS43MSAyMC4yOUwxOCAxNi42MUE5IDkgMCAxIDAgMTYuNjEgMThsMy42OCAzLjY4YTEgMSAwIDAgMCAxLjQyIDBhMSAxIDAgMCAwIDAtMS4zOU0xMSAxOGE3IDcgMCAxIDEgNy03YTcgNyAwIDAgMS03IDciLz48L3N2Zz4="
+                    alt="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIxIj48cGF0aCBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNNCAxOGE0IDQgMCAwIDEgNC00aDhhNCA0IDAgMCAxIDQgNGEyIDIgMCAwIDEtMiAySDZhMiAyIDAgMCAxLTItMloiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjMiLz48L2c+PC9zdmc+"
+                    alt="">
+            </div>
+        </div>
+        <div class="login">
+            <p>Login</p>
+            <input type="email" name="" id="" placeholder="E-mail*">
+            <input type="password" name="" id="" placeholder="Password*">
+            <a href="">Forgot your password?</a>
+            <input type="button" name="" id="" value="Login" style="background-color: black; color: white;  margin-top: 4vh; width: 100%; padding-right: 1.5vw;">
+            <a href="" style="margin-left: 13.7vw;">Sign up</a>
+        </div>
+ <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>JOIN WESTERN RISE</h3>
+                <p>ESCAPE THE ORDINARY. TRAVEL PHILOSOPHY, PACKING GUIDES, AND INSPIRATION FOR THE ROAD LESS TRAVELED.
+                </p>
+                <form class="email-form">
+                    <input type="email" placeholder="E-MAIL*" required>
+                    <button>&#8594;</button>
+                </form>
+            </div>
+
+            <div class="footer-column">
+                <h3>CONCIERGE</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">CUSTOMER SUPPORT</a></li>
+                    <li><a href="#">START A RETURN</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>EXPLORE</h3>
+                <ul>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">STORY</a></li>
+                    <li><a href="#">JOURNAL</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>SOCIAL</h3>
+                <ul>
+                    <li><a href="#">INSTAGRAM</a></li>
+                    <li><a href="#">FACEBOOK</a></li>
+                    <li><a href="#">TIKTOK</a></li>
+                    <li><a href="#">YOUTUBE</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+</body>
+
+</html>

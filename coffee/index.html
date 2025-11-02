@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 800;
+            margin: 0;
+            padding: 0;
+            /* overflow-x: hidden; */
+        }
+
+        .body {
+            overflow-x: hidden;
+        }
+
+        .bg {
+            background-image: url("https://cdn.hstatic.net/themes/1000075078/1001392287/14/slide_2_img.jpg?v=2165");
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .logo img {
+            width: 30vw;
+
+        }
+
+        .logo {
+            display: flex;
+            height: 10vh;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 5;
+
+
+        }
+
+        .logo p {
+            color: white;
+            margin-right: 1.3vw;
+            font-size: 1vw;
+            font-weight: bold;
+
+        }
+
+        .logo:hover {
+            background-color: white;
+        }
+
+        .logo:hover p {
+            color: black;
+        }
+
+        .logo:hover img {
+            filter: brightness(0) invert(0);
+        }
+
+
+        /* When scrolled down */
+        .logo.scrolled {
+            background-color: white;
+        }
+
+        .logo.scrolled p {
+            color: black;
+        }
+
+        .logo.scrolled img {
+            filter: brightness(0) invert(0);
+        }
+
+        .down {
+            height: 4.5vh;
+            width: 12vw;
+            background-color: rgb(246, 228, 128);
+            border-radius: 2vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-right: 5vw;
+
+        }
+
+        .down p {
+            color: black;
+            padding-left: .4vw;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links p {
+            color: white;
+            font-size: 1vw;
+            cursor: pointer;
+
+        }
+
+        @keyframes scrollText {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .rol {
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            background-color: rgb(245, 240, 213);
+            color: rgb(165, 118, 42);
+            overflow-x: hidden;
+
+        }
+
+        .text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scrollText 50s linear infinite;
+        }
+
+        .flying {
+            text-align: center;
+            padding: 10vh 5vw;
+            background-color: #fff;
+        }
+
+
+        .curved {
+            font-size: 3vw;
+            letter-spacing: 0.25vw;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            transform: rotateX(35deg);
+            transform-origin: center;
+            margin-bottom: 2vh;
+        }
+
+        .flying p {
+            font-size: 1.8vw;
+            font-weight: 600;
+            line-height: 2vw;
+            width: 65%;
+            margin: 0 auto;
+            color: #000;
+        }
+
+        .lrn {
+            display: inline-block;
+            margin-top: 5vh;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            padding: 1vw 2.5vw;
+            border-radius: 3vw;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lrn:hover {
+            background-color: rgb(246, 228, 128);
+            color: black;
+        }
+
+        .photo {
+            position: relative;
+            height: 120vh;
+            width: 100%;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .photos {
+            background-image: url("https://file.hstatic.net/1000075078/file/banner-home-aboutus.png");
+            background-size: cover;
+            background-position: center;
+            width: 35vw;
+            height: 70vh;
+            margin: 0 auto;
+            border-radius: 1vw;
+            position: relative;
+            top: 10vh;
+        }
+
+        .photo img {
+            position: absolute;
+            transition: transform 0.3s ease-out;
+        }
+
+        .float1 {
+            top: 0vh;
+            left: 25vw;
+            width: 10vw;
+        }
+
+        .float2 {
+            top: 16vh;
+            right: 66vw;
+            width: 12vw;
+        }
+
+        .float3 {
+            top: 20vh;
+            left: 65vw;
+            width: 10vw;
+            height: 4vh;
+        }
+
+        .float4 {
+            bottom: 46vh;
+            right: 58vw;
+            width: 12vw;
+            z-index: 4;
+        }
+
+        .float5 {
+            top: 37vh;
+            left: 23vw;
+            width: 13vw;
+            z-index: 1;
+        }
+
+        .float6 {
+            top: 45vh;
+            right: 25vw;
+            width: 10vw;
+        }
+
+        .float7 {
+            bottom: 80vh;
+            right: 24vw;
+            width: 13vw;
+        }
+
+
+        .featured {
+            background-color: rgb(248, 238, 209);
+            height: 90vh;
+            width: 100%;
+            position: relative;
+
+        }
+
+        .only {
+            position: absolute;
+            top: 1vw;
+            left: 70vw;
+            width: 8vw;
+        }
+
+        .item {
+            display: flex;
+            gap: 4vw;
+            margin-left: 14vw;
+        }
+
+        .item p {
+            margin-top: 1.6vw;
+            font-weight: 600;
+            font-size: 1.4vw;
+
+        }
+
+        .kaafee {
+            height: 60vh;
+            width: 20vw;
+        }
+
+        .kaafee img {
+            width: 19vw;
+        }
+
+        .kaafee p {
+            text-align: center;
+        }
+
+        .dukan {
+            display: flex;
+            margin-left: 11vw;
+
+        }
+
+        .dukan img {
+            transition: transform 0.4s ease;
+        }
+
+        .dukan img:hover {
+            transform: scale(1.1);
+        }
+
+        .back {
+            background-image: url("https://cdn.hstatic.net/files/1000075078/file/rectangle_45__1_.jpg");
+            background-size: 100% 100%;
+            height: 100%;
+            width: 50%;
+        }
+
+        .orange {
+            height: 82vh;
+            display: flex;
+            background-color: rgb(245, 137, 55);
+            color: white;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .written {
+            width: 50vw;
+            position: relative;
+        }
+
+        .written p {
+            font-weight: 700;
+
+        }
+
+        .one {
+            text-align: center;
+            width: 60vw;
+        }
+
+        .two {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8vh;
+            margin-top: 10vh;
+            width: 40vw;
+        }
+
+        .select-box {
+            width: 20vw;
+            padding: 1.2vh 1vw;
+            border-radius: 50px;
+            border: 2px solid #e98351;
+            font-size: 1vw;
+            color: #e98351;
+            background-color: white;
+            font-weight: 300;
+        }
+
+
+
+        .store-link {
+            font-weight: 800;
+            font-size: 1.1vw;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 1vh;
+        }
+
+        .find {
+            display: flex;
+            background-color: rgb(248, 238, 209);
+            position: relative;
+            height: 45vh;
+        }
+
+
+        .instagram-block {
+            width: 50vw;
+            margin: 10vh auto;
+            padding-left: 15vw;
+        }
+
+        .insta-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4vh;
+        }
+
+        .sub-head {
+            font-size: .84vw;
+            font-weight: 700;
+            color: black;
+        }
+
+        .main-head {
+            font-size: 2vw;
+            font-weight: 600;
+            color: #f28b4c;
+            margin-top: .7vh;
+        }
+
+        .follow-btn {
+            text-decoration: none;
+            font-size: 1vw;
+            font-weight: 700;
+            color: black;
+            display: flex;
+            align-items: center;
+            gap: 0.4vw;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .follow-btn span {
+            transition: transform 0.3s;
+        }
+
+        .follow-btn:hover span {
+            transform: translateX(5px);
+        }
+
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5vw;
+        }
+
+        .insta-grid img {
+            width: 100%;
+            border-radius: 15px;
+            transition: transform 0.4s ease;
+            cursor: pointer;
+        }
+
+        .insta-grid img:hover {
+            transform: scale(1.06);
+        }
+
+        .insta {
+            display: flex;
+        }
+
+        .news {
+            width: 45vw;
+            padding-left: 5vw;
+            margin: 10vh auto;
+            margin-right: 12vw;
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3vw;
+            margin-top: 1vw;
+        }
+
+        .date {
+            display: flex;
+            justify-content: space-between;
+            margin-top: .6vw;
+            margin-bottom: 1vw;
+            margin-left: .5vw;
+
+        }
+
+        .coffeeholic {
+            background-color: rgb(248, 238, 209);
+            border-radius: 1vw;
+        }
+
+        .news img {
+            transition: transform 0.4s ease;
+            cursor: pointer;
+        }
+
+        .news img:hover {
+            transform: scale(1.06);
+
+        }
+
+
+        .tch-footer {
+            background: #0d0d0d;
+            color: #ffffff;
+            padding: 60px 8vw;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .footer-col {
+            width: 28vw;
+        }
+
+        .footer-col h3 {
+            color: #ff7a29;
+            font-size: 1vw;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin: 1vw 0;
+        }
+
+        .footer-col ul li a {
+            color: #d6d6d6;
+            text-decoration: none;
+            font-size: .6vw;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ff7a29;
+        }
+
+        .footer-col p {
+            color: rgb(255, 128, 0);
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .download {
+            color: #ff7a29;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .qr {
+            width: 4vw;
+            margin: 15px 0;
+        }
+
+        .follow {
+            margin-top: 15px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .socials i {
+            font-size: 20px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .socials i:hover {
+            color: #ff7a29;
+        }
+
+        .footer-lower {
+            margin-top: 30px;
+        }
+
+        .footer-lower ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 300;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 35px 0;
+        }
+
+        .legal {
+            font-size: 12px;
+            color: #aaa;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .footer-right {
+            width: 25vw;
+        }
+
+        @media (max-width: 600px) {
+            .photo{
+                height: 40vh;
+            }
+            .photos{
+                height: 40vw;
+            }
+              .float1 {
+            top: 0vh;
+            left: 25vw;
+            width: 18vw;
+        }
+
+        .float2 {
+            top: 6vh;
+            right: 66vw;
+            width: 18vw;
+        }
+
+        .float3 {
+            top: 3vh;
+            left: 65vw;
+            width: 15vw;
+            height: 4vh;
+        }
+
+        .float4 {
+            top: 4vh;
+            right: 58vw;
+            width: 18vw;
+            z-index: 4;
+        }
+
+        .float5 {
+            top: 7vh;
+            left: 23vw;
+            width: 18vw;
+            z-index: 1;
+        }
+
+        .float6 {
+            top: 15vh;
+            right: 25vw;
+            width: 10vw;
+        }
+
+        .float7 {
+            top: 1vh;
+            right: 24vw;
+            width: 13vw;
+        }
+        .featured{
+            height: 70vw;
+        }
+        .orange{
+            height: 40vh;
+            position: relative;
+        }
+        .written p{
+            position: absolute;
+            top: 5vh;
+        }
+        .find{
+            height: 30vh;
+        }
+
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="index.js"></script>
+
+</head>
+
+<body>
+    <div class="bg">
+        <div class="logo">
+            <img src="https://res.cloudinary.com/duxr6irjz/image/upload/v1761547225/generated-image_cxgwv8.png" alt="">
+            <div class="nav-links">
+                <p>HOME</p>
+                <p>"HOME" COLLECTION</p>
+                <p>"HOME" STORY</p>
+                <p>NEWS</p>
+                <p>STORY</p>
+                <a href="contact.html" style="text-decoration: none;"><p>CONTACT</p></a>
+            </div>
+            <a href="download.html" style="text-decoration: none;">
+            <div class="down">
+                <p>APP DOWNLOAD</p>
+            </div></a>
+            <P><span style="color: orange; margin-right: 1vw;">VI</span> EN</P>
+        </div>
+    </div>
+    <div class="rol">
+        <div class="text">
+            • &nbsp; FROM A LEADING LOCAL ESPRESSO CHAIN &nbsp;&nbsp;• &nbsp; FROM A LEADING LOCAL ESPRESSO CHAIN
+            &nbsp;&nbsp;• &nbsp; FROM A LEADING LOCAL ESPRESSO CHAIN &nbsp;&nbsp;• &nbsp; FROM A LEADING LOCAL ESPRESSO
+            CHAIN
+            &nbsp;&nbsp;• &nbsp; FROM A LEADING LOCAL ESPRESSO CHAIN
+
+            <!-- twice for infinity ani -->
+            • &nbsp; FROM A LEADING LOCAL ESPRESSO CHAIN &nbsp;&nbsp;• &nbsp; FROM A LEADING LOCAL ESPRESSO CHAIN
+            &nbsp;&nbsp;• &nbsp; FROM A LEADING LOCAL ESPRESSO CHAIN &nbsp;&nbsp;• &nbsp; FROM A LEADING LOCAL ESPRESSO
+            CHAIN
+            &nbsp;&nbsp;• &nbsp; FROM A LEADING LOCAL ESPRESSO CHAIN
+        </div>
+    </div>
+    <div class="flying">
+        <h1 class="curved">CHUYSHEDSN “NHAAH”</h1>
+        <p>
+            The Coffee House believes that smile is the sweetest flavor in every new day.
+            From rich cups of coffee, cool cups of tea, to every familiar greeting,
+            we hope each guest who visits the House brings a little joy –
+            and then that smile spreads everywhere.
+        </p>
+        <div class="lrn">LEARN</div>
+    </div>
+    <div class="photo">
+        <div class="photos"></div>
+
+        <img class="float float1" src="https://file.hstatic.net/1000075078/file/sticker-aboutus-rectangle_17.png"
+            alt="">
+        <img class="float float2" src="https://file.hstatic.net/1000075078/file/sticker-aboutus-quote-2.png" alt="">
+        <img class="float float3" src="https://file.hstatic.net/1000075078/file/sticker-aboutus-quote-1.png" alt="">
+        <img class="float float4" src="https://file.hstatic.net/1000075078/file/sticker-aboutus-vuive.png" alt="">
+        <img class="float float5" src="https://file.hstatic.net/1000075078/file/sticker-aboutus-rectangle_15.png"
+            alt="">
+        <img class="float float6" src="https://file.hstatic.net/1000075078/file/sticker-aboutus-rectangle_18.png"
+            alt="">
+        <img class="float float7" src="https://file.hstatic.net/1000075078/file/sticker-aboutus-quote.png" alt="">
+    </div>
+
+    <div class="featured">
+        <img src="https://file.hstatic.net/1000075078/file/sticker-collectiontabs.png" alt="" class="only">
+        <p style="text-align: center; font-size: 2vw; font-weight: 100; padding-top: 5vw; margin-bottom: 2vw;">FEATURED
+            PRODUCT</p>
+        <p style="text-align: center; font-size: 3vw; color: rgb(255, 128, 0); font-weight: 600; word-spacing: 1vh;">
+            “HOUSE” COLLECTION</p>
+        <div class="item">
+            <p>COFFEE<sup>6</sup></p>
+            <p>TEA<sup>4</sup></p>
+            <p>FOOD<SUP>6</SUP></p>
+            <p>OTHER DISHES<sup>2</sup></p>
+        </div>
+        <div class="dukan">
+            <div class="kaafee">
+                <img src="https://cdn.hstatic.net/products/1000075078/latte_nong_77d6c8dd1ce84d0f900f83d99f069557_grande.png"
+                    alt="">
+                <p style="font-size: .7vw;">Coffee</p>
+                <p style="font-size: 1vw; padding-top: 1vh; font-weight: 878;">Hot Latte</p>
+                <p style="font-size: 1vw; padding-top: 3.5vh;
+        font-weight: 778; word-spacing: 1vh;color: orange; ">59,000 VND</p>
+            </div>
+            <div class="kaafee">
+                <img src="https://cdn.hstatic.net/products/1000075078/latte_caremel_cold_foam_e1245abc921241a5868fa2ab137e17a8_grande.png"
+                    alt="">
+                <p style="font-size: .7vw;">New Must Try</p>
+                <p style="font-size: 1vw; padding-top: 1vh; font-weight: 878;">Latte Caramel Cold Foam</p>
+                <p style="font-size: 1vw; padding-top: 3.5vh;
+        font-weight: 778; word-spacing: 1vh;color: orange; ">59,000 VND</p>
+            </div>
+            <div class="kaafee">
+                <img src="https://product.hstatic.net/1000075078/product/1746439218_latte-classic_e216596a8267420b9e55714322ac2d8f_grande.png"
+                    alt="">
+                <p style="font-size: .7vw;">New Must Try</p>
+                <p style="font-size: 1vw; padding-top: 1vh; font-weight: 878;">Latte Classic</p>
+                <p style="font-size: 1vw; padding-top: 3.5vh;
+        font-weight: 778; word-spacing: 1vh;color: orange; ">55,000 VND</p>
+            </div>
+            <div class="kaafee">
+                <img src="https://product.hstatic.net/1000075078/product/1746441372_halzenut-latte_3ef994056c3b4765a600e853f6cca72d_grande.png"
+                    alt="">
+                <p style="font-size: .7vw;">New Must Try</p>
+                <p style="font-size: 1vw; padding-top: 1vh; font-weight: 878;"> Hazelnut Latte</p>
+                <p style="font-size: 1vw; padding-top: 3.5vh;
+        font-weight: 778; word-spacing: 1vh;color: orange; ">59,000 VND</p>
+            </div>
+        </div>
+        <p style="margin-left: 80vw; position: absolute; bottom: 2vw;"><u>SEE MORE</u> &RightArrow;</p>
+    </div>
+
+    <div class="orange">
+        <div class="back"></div>
+        <div class="written">
+            <p style="font-size: 3vw; padding: 4vw; margin-top: 22vh;">☕ Original from quality coffee beans value</p>
+            <p style="margin-left: 4vw; font-weight: 500;font-size: .9vw;">Every Smile at the Coffehouse starts with the
+                original coffee beans</p>
+            <p style="margin-left: 4vw;
+            margin-top: 3vw;"><u>SEE MORE</u> &RightArrow;</p>
+        </div>
+    </div>
+    <div class="find">
+        <div class="one">
+            <img src="https://file.hstatic.net/1000075078/file/stickerset_stores-2.png" alt=""
+                style="position: absolute; width: 5vw; left: 16vw; top: 3vh; ">
+            <p style="font-size: 3vw; font-weight: 600; padding-left: 5vw; padding-top: 5vw;
+            padding-right: 15vw; margin-left: 14vw;">Find a home near you</p>
+            <p style="font-size: .9vw; font-weight: 200; margin-left: 18vw; margin-right: 14vw; padding: 1.7vw;">No
+                matter where you are, “House” is always nearby.
+                Find a corner of the House to sip a cup of coffee, listen to familiar music and enjoy the fun little
+                moments of the day.</p>
+            <img src="https://file.hstatic.net/1000075078/file/stickerset-stores_1.png" alt=""
+                style="width: 7vw; position: absolute; top: 30vh; left: 40vw;">
+        </div>
+        <div class="two">
+            <select class="select-box">
+                <option selected disabled>Select City</option>
+                <option>Mumbai</option>
+                <option>Delhi</option>
+                <option>Bangalore</option>
+            </select>
+
+            <select class="select-box">
+                <option selected disabled>Select Ward/Commune</option>
+                <option>Ward 1</option>
+                <option>Ward 2</option>
+                <option>Ward 3</option>
+            </select>
+
+
+            <a href=""></a>
+            <a href="#" style="
+             text-decoration: none; color: black; font-weight: lighter;"><u>SEE STORE LIST</u>
+                &RightArrow;</a>
+            <img src="https://file.hstatic.net/1000075078/file/stickerset-stores3.png" alt=""
+                style="width: 5vw; position: absolute; left: 82vw; top: 3vh;">
+        </div>
+
+    </div>
+
+
+    <div class="insta">
+        <div class="instagram-block">
+            <div class="insta-header">
+                <div>
+                    <p class="sub-head">CONNECT WITH HOME</p>
+                    <h2 class="main-head">INSTAGRAM</h2>
+                </div>
+
+                <a href="#" class="follow-btn">FOLLOW NOW <span>➜</span></a>
+            </div>
+
+            <div class="insta-grid">
+                <img src="https://file.hstatic.net/1000075078/file/instagram1.png">
+                <img src="https://file.hstatic.net/1000075078/file/instagram2.png">
+                <img src="https://file.hstatic.net/1000075078/file/instagram3.png">
+                <img src="https://file.hstatic.net/1000075078/file/instagram4.png">
+                <img src="https://file.hstatic.net/1000075078/file/instagram5.png">
+                <img src="https://file.hstatic.net/1000075078/file/instagram6.png">
+            </div>
+        </div>
+
+        <div class="news">
+            <div class="head">
+                <p style=" color: #f28b4c; font-size: 2vw; font-weight: 600;">NEWS</p>
+                <p style="font-size: 1vw; "><u style="font-weight: 600;">SEE MORE</u> &RightArrow;</p>
+            </div>
+            <div class="coffeeholic">
+                <img src="https://file.hstatic.net/1000075078/article/thecoffeehouse_caphehighlight01_de40c0102a954c50a328f7befcdd82bd_1024x1024.jpg"
+                    alt="" style="width: 34vw; border-radius: 1vw; ">
+                <div class="date">
+                    <p style="color: orange; font-size: .9vw; font-weight: 600;">COFFEEHOLIC</p>
+                    <p style="color: grey; font-weight: 300; font-size: .7vw;">11.01.2023</p>
+                </div>
+                <p style="font-size: .9vw; font-weight: 550;margin-left: .5vw;">ENCOUNTERING OLD SAIGON IN MODERN YOUTH
+                    DRINKS</p>
+                <p style="font-size: 1vw; font-weight: 500; margin-top: 1vw; margin-left: .5vw;">No matter how many
+                    layers of time waves, people can still find the ups and downs of an old Saigon. On street corners,
+                    in photos, in countless literary works... and of course in the rich culinary paradise. Saigon street
+                    food has</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="tch-footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>INTRODUCTION</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Promotions</a></li>
+                    <li><a href="#">Coffee story</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Recruitment</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>© 2025 THE COFFEE HOUSE</h3>
+                <p style="color: white; font-weight: 400;"><strong style="color: #f27c41;">VPGG:</strong> 6th Floor,
+                    Toyota Building, No. 315 Truong Chinh,
+                    Khuong Mai Ward, Thanh Xuan District, Hanoi City, Vietnam</p>
+                <p style="color: white;font-weight: 400;"><strong style="color: #f27c41;">Order:</strong> 1800 6936</p>
+                <p style="color: white;font-weight: 400;"><strong style="color: #f27c41;">E-mail:</strong>
+                    support.hn@ggg.com.vn</p>
+            </div>
+
+            <div class="footer-col footer-right">
+                <h1 class="footer-logo">THE COFFEE HOUSE</h1>
+                <p class="download">DOWNLOAD APP</p>
+                <p class="download">THE COFFEE HOUSE APP</p>
+
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://thecoffeehouse.com"
+                    class="qr">
+
+                <p class="follow">FOLLOW US</p>
+                <div class="socials">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-lower">
+            <h3 style="color: #f27c41;">CLAUSE</h3>
+            <ul>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Information security policy</a></li>
+                <li><a href="#">Instructions for issuing VAT invoices</a></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <p class="legal">
+            Vietnam Tea Coffee Trading and Services Joint Stock Company<br>
+            Business code: 0312867172 issued by the Department of Planning and Investment of the city. HCM issued on
+            July 23, 2014.<br>
+            Address: 86–88 Cao Thang, Ward 04, District 3, Ho Chi Minh City • Phone: (028) 7107 8079 • Email:
+            hi@thecoffeehouse.vn<br>
+            © 2014–2025 Vietnam Tea Coffee Trading and Services Joint Stock Company all rights reserved
+        </p>
+    </footer>
+
+
+
+</body>
+
+</html>

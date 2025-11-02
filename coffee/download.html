@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 800;
+            margin: 0;
+            padding: 0;
+            /* overflow-x: hidden; */
+        }
+
+        .body {
+            overflow-x: hidden;
+        }
+
+
+
+        .logo img {
+            width: 30vw;
+
+        }
+
+        .logo {
+            display: flex;
+            height: 10vh;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 5;
+
+
+        }
+
+        .logo p {
+            color: white;
+            margin-right: 1.3vw;
+            font-size: 1vw;
+            font-weight: bold;
+
+        }
+
+        .logo:hover {
+            background-color: white;
+        }
+
+        .logo:hover p {
+            color: black;
+        }
+
+        .logo:hover img {
+            filter: brightness(0) invert(0);
+        }
+
+        .down {
+            height: 4.5vh;
+            width: 12vw;
+            background-color: rgb(246, 228, 128);
+            border-radius: 2vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-right: 5vw;
+
+        }
+
+        .down p {
+            color: black;
+            padding-left: .4vw;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links p {
+            color: white;
+            font-size: 1vw;
+            cursor: pointer;
+
+        }
+
+        .big {
+            height: 100vh;
+            display: flex;
+            background-color: rgb(237, 235, 215);
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .para {
+            width: 50vw;
+
+
+
+            margin-top: 40vh;
+            margin-left: 5vw;
+        }
+
+        .photo {
+            width: 50vw;
+        }
+
+        .photo img {
+            width: 80%;
+            margin: 5vw;
+        }
+
+        .over {
+            background-color: rgb(254, 239, 166);
+
+        }
+
+        .card {
+            display: flex;
+            /* padding-left: 5vw; */
+            text-align: center;
+        }
+
+        .over img {
+            width: 9vw;
+        }
+
+        .card img {
+            padding: 1vw;
+        }
+
+        .card p {
+            font-size: .9vw;
+            font-weight: 450;
+        }
+
+        .ar {
+            color: rgb(255, 85, 0);
+        }
+
+        .ez {
+            padding: 3vw;
+        }
+
+        .arr {
+            padding: 1.5vw;
+        }
+
+        .tch-footer {
+            background: #0d0d0d;
+            color: #ffffff;
+            padding: 60px 8vw;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .footer-col {
+            width: 28vw;
+        }
+
+        .footer-col h3 {
+            color: #ff7a29;
+            font-size: 1vw;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin: 1vw 0;
+        }
+
+        .footer-col ul li a {
+            color: #d6d6d6;
+            text-decoration: none;
+            font-size: .6vw;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ff7a29;
+        }
+
+        .footer-col p {
+            color: rgb(255, 128, 0);
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .download {
+            color: #ff7a29;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .qr {
+            width: 4vw;
+            margin: 15px 0;
+        }
+
+        .follow {
+            margin-top: 15px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .socials i {
+            font-size: 20px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .socials i:hover {
+            color: #ff7a29;
+        }
+
+        .footer-lower {
+            margin-top: 30px;
+        }
+
+        .footer-lower ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 300;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 35px 0;
+        }
+
+        .legal {
+            font-size: 12px;
+            color: #aaa;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .footer-right {
+            width: 25vw;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<div class="logo">
+    <img src="https://res.cloudinary.com/duxr6irjz/image/upload/v1761547225/generated-image_cxgwv8.png" alt="">
+    <div class="nav-links">
+       <a href="index.html"style="text-decoration: none;">
+            <p>HOME</p>
+        </a>
+        <p>"HOME" COLLECTION</p>
+        <p>"HOME" STORY</p>
+        <p>NEWS</p>
+        <p>STORY</p>
+        <a href="contact.html"style="text-decoration: none;">
+            <p>CONTACT</p>
+        </a>
+        <a href="download.html" style="text-decoration: none;">
+            <div class="down">
+                <p>APP DOWNLOAD</p>
+            </div>
+        </a>
+        <P><span style="color: orange; margin-right: 1vw;">VI</span> EN</P>
+    </div>
+    </div>
+
+
+    <div class="big">
+        <div class="para">
+            <p>
+                <span style="font-size: 4vw; font-weight: 500;"> DOWNLOAD NOW</span><br>
+                <span style="font-size: 3.3vw; font-weight: 500;">
+                    THE COFFEE HOUSE APP</span><br>
+                <span style="font-size: 2.3vw; font-weight: 500;"> to receive a</span> <span
+                    style="color: rgb(255, 128, 0); font-size: 2.3vw;">100K voucher <br>immediately</span>
+
+            </p>
+            <img src="https://cdn.hstatic.net/files/1000075078/file/6b68dfb838acb5f2ecbd.jpg" alt=""
+                style="width: 5vw;">
+        </div>
+        <div class="photo">
+            <img src="https://file.hstatic.net/1000075078/file/banner-app.png" alt="">
+        </div>
+
+    </div>
+    <div class="over">
+        <p style="font-size: 3.5vw; font-weight: 600; text-align: center; padding: 5vw; word-spacing: .4vw;">Over 2
+            million
+            people have signed up!!!</p>
+        <div class="card">
+            <div class="ez"><img src="https://file.hstatic.net/1000075078/file/dat-mon-de-dang.png" alt="">
+                <p class="arr" style="font-size: 1.1vw;     font-weight: bold;
+"><span class="ar">Easy </span>ordering</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec vulputate magna. </p>
+            </div>
+            <div class="ez"><img src="https://file.hstatic.net/1000075078/file/tim-nha-gan-nhat.png" alt="">
+                <p class="arr" style="font-size: 1.1vw;      font-weight: bold; 
+">Find the <span class="ar">nearest house</span></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec vulputate magna. </p>
+            </div>
+            <div class="ez"><img src="https://file.hstatic.net/1000075078/file/doi-uu-dai.png" alt="">
+                <p class="arr" style="font-size: 1.1vw;       font-weight: bold;
+">Redeem offers <span class="ar">from BEAN</span></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec vulputate magna. </p>
+            </div>
+            <div class="ez"><img src="https://file.hstatic.net/1000075078/file/tich-diem-nhanh-tai-quay.png" alt="">
+                <p class="arr" style="font-size: 1.1vw;       font-weight: bold;
+">Quick points <span class="ar">at the counter</span></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec vulputate magna. </p>
+            </div>
+        </div>
+    </div>
+    <footer class="tch-footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>INTRODUCTION</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Promotions</a></li>
+                    <li><a href="#">Coffee story</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Recruitment</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>© 2025 THE COFFEE HOUSE</h3>
+                <p style="color: white; font-weight: 400;"><strong style="color: #f27c41;">VPGG:</strong> 6th Floor,
+                    Toyota Building, No. 315 Truong Chinh,
+                    Khuong Mai Ward, Thanh Xuan District, Hanoi City, Vietnam</p>
+                <p style="color: white;font-weight: 400;"><strong style="color: #f27c41;">Order:</strong> 1800 6936</p>
+                <p style="color: white;font-weight: 400;"><strong style="color: #f27c41;">E-mail:</strong>
+                    support.hn@ggg.com.vn</p>
+            </div>
+
+            <div class="footer-col footer-right">
+                <h1 class="footer-logo">THE COFFEE HOUSE</h1>
+                <p class="download">DOWNLOAD APP</p>
+                <p class="download">THE COFFEE HOUSE APP</p>
+
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://thecoffeehouse.com"
+                    class="qr">
+
+                <p class="follow">FOLLOW US</p>
+                <div class="socials">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-lower">
+            <h3 style="color: #f27c41;">CLAUSE</h3>
+            <ul>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Information security policy</a></li>
+                <li><a href="#">Instructions for issuing VAT invoices</a></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <p class="legal">
+            Vietnam Tea Coffee Trading and Services Joint Stock Company<br>
+            Business code: 0312867172 issued by the Department of Planning and Investment of the city. HCM issued on
+            July 23, 2014.<br>
+            Address: 86–88 Cao Thang, Ward 04, District 3, Ho Chi Minh City • Phone: (028) 7107 8079 • Email:
+            hi@thecoffeehouse.vn<br>
+            © 2014–2025 Vietnam Tea Coffee Trading and Services Joint Stock Company all rights reserved
+        </p>
+    </footer>

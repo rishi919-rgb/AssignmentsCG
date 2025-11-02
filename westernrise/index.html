@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+                     
+
+        }
+
+        .body {
+            z-index: 1;
+            overflow-x: hidden;
+
+        }
+
+        .bg {
+            width: 99vw;
+            height: 110vh;
+            display: flex;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        @keyframes scrollText {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .scrol {
+            background-color: darkgreen;
+            height: 3vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: sticky;
+            top: 0vw;
+        }
+
+        .dibba1 {
+            position: absolute;
+            left: 0vw;
+            color: white;
+            display: flex;
+            width: 33vw;
+            gap: 1vw;
+            margin-left: 3vw;
+            margin-top: 1.5vw;
+        }
+
+        .dibba2 {
+            position: absolute;
+            left: 43vw;
+            margin-top: 1.5vw;
+        }
+
+        .dibba2 img {
+            width: 13vw;
+        }
+
+        .dibba3 {
+            position: absolute;
+            left: 80vw;
+            color: white;
+            margin-top: 1.5vw;
+            display: flex;
+            gap: 1vw;
+            margin-left: 4vw;
+        }
+
+        .dibba3 img {
+            filter: brightness(0) invert(1);
+        }
+
+        .cloth {
+            display: flex;
+            width: 100%;
+            background-color: white;
+            height: 50vh;
+            margin-top: 3vw;
+           
+            overflow-y: hidden;
+        }
+
+
+
+
+        .shirt {
+            width: 19vw;
+            height: 45vh;
+            text-align: center;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            transition: 0.4s ease-in-out;
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+
+        .shirt img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity .4s ease-in-out;
+            overflow-y: hidden;
+        }
+
+        .img-hover {
+            opacity: 0;
+        }
+
+
+        /* Default Image */
+        .shirt1 {
+            background-image: url("https://westernrise.com/cdn/shop/files/11.jpg?v=1754440264&width=500");
+        }
+
+        .shirt:hover .img-default {
+            opacity: 0;
+        }
+
+        .shirt:hover .img-hover {
+            opacity: 1;
+        }
+
+        /* Hover Image */
+        .shirt1:hover {
+            background-image: url("https://westernrise.com/cdn/shop/files/WESTERNR.1273.jpg?v=1754440264&width=300");
+        }
+
+        .shirt p {
+            position: absolute;
+            bottom: 3vh;
+            width: 100%;
+            font-weight: 600;
+        }
+
+
+
+
+
+
+        .return {
+            background-image: url("https://westernrise.com/cdn/shop/files/Mask_group_ba4a9d0e-3f0c-4046-a169-5bf7e2fa57ee.jpg?v=1758729788&width=1200");
+            width: 100%;
+            height: 60vh;
+            background-size: 100% 100%;
+            position: relative;
+            margin-top: 5vw;
+        }
+
+        .return img {
+            width: 20vw;
+            margin-left: 40vw;
+            margin-top: 25vh;
+        }
+
+        .cards {
+            width: 100vw;
+            height: 50vh;
+            display: flex;
+            gap: 1vw;
+            margin: 2vw;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .top1 {
+            background-image: url("https://westernrise.com/cdn/shop/files/Mask_group_3_05555ba8-5653-4c8f-93c4-311a9bd48dee.jpg?v=1758730530&width=300");
+            background-size: 100% 100%;
+            width: 20vw;
+            height: 100%;
+        }
+
+        .top2 {
+            background-image: url("https://westernrise.com/cdn/shop/files/Mask_group_1_1.jpg?v=1758730529&width=400");
+            background-size: 100% 100%;
+            width: 20vw;
+            height: 100%;
+        }
+
+        .top3 {
+            background-image: url("https://westernrise.com/cdn/shop/files/Mask_group_2_1_62f803ee-6fc3-4d66-9db2-19acff4fd52e.jpg?v=1758730531&width=400");
+            background-size: 100% 100%;
+            width: 20vw;
+            height: 100%;
+
+        }
+
+        .top p {
+            color: white;
+            text-align: center;
+        }
+
+        .escape {
+            background-image: url("https://westernrise.com/cdn/shop/files/THE_ESCAPE_COLLECTION.jpg?v=1753542292&width=1800");
+            height: 90vh;
+            width: 100%;
+            background-size: 100% 100%;
+            color: white;
+            text-align: center;
+        }
+
+        .top4 {
+            background-image: url("https://westernrise.com/cdn/shop/files/Mask_group_4_f2d32f9d-6f94-4646-9b66-e892be33105a.jpg?v=1753566124&width=400");
+            background-size: 100% 100%;
+            width: 20vw;
+            height: 100%;
+        }
+
+        .top5 {
+            background-image: url("https://westernrise.com/cdn/shop/files/Mask_group_5.jpg?v=1753566124&width=400");
+            background-size: 100% 100%;
+            width: 20vw;
+            height: 100%;
+        }
+
+        .top6 {
+            background-image: url("https://westernrise.com/cdn/shop/files/Mask_group_6.jpg?v=1753566124&width=400");
+            background-size: 100% 100%;
+            width: 20vw;
+            height: 100%;
+        }
+
+        .last {
+            background-image: url("https://westernrise.com/cdn/shop/files/Mask_group_3_1.jpg?v=1753791378&width=1200");
+            width: 90%;
+            height: 80vh;
+            background-size: 100% 100%;
+            margin-left: 5vw;
+        }
+
+        footer {
+            background: #ffffff;
+            padding: 60px 0;
+            border-top: 1px solid #ddd;
+            font-family: sans-serif;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-column h3 {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column p {
+            max-width: 260px;
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+
+        .email-form {
+            margin-top: 20px;
+            display: flex;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+        }
+
+        .email-form input {
+            border: none;
+            outline: none;
+            flex: 1;
+            font-size: 14px;
+        }
+
+        .email-form button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li a {
+            display: block;
+            text-decoration: none;
+            color: #000000;
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.85;
+        }
+
+        .footer-column ul li a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 13px;
+            opacity: 0.6;
+        }
+        .kapda p{
+            justify-self: center;
+            font-weight: 600;
+            margin-top: 1vw;
+            /* margin-bottom: 3vw; */
+            /* height: 100vh; */
+        }
+
+
+@media (max-width: 600px) {
+   
+    .shirt {
+        width: 44vw;
+    }
+
+    .shirt img {
+        height: 55vw;
+    }
+
+    .shirt p {
+        font-size: 3.5vw;
+    }
+
+    .aa {
+        font-size: 3.2vw !important;
+    }
+    .top{
+        height: 60vh;
+        width: 80%;
+    }
+    .cards{
+        display: block;
+        height: 250vh;
+        margin-left: 9vw;
+    }
+    .escape{
+        height: 50vh;
+        position: relative;
+    }
+    .escape p{
+        position: absolute;
+        top: 20vh;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .last{
+        width: 80%;
+        height: 40vh;
+    }
+}
+    </style>
+</head>
+
+
+<body>
+    <div class="scrol">
+        <p style="background-color: darkgreen; color: white; animation: scrollText 200s linear infinite;   display: inline-block; font-size: 1vw; font-weight: 800;
+            white-space: nowrap; ">•
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;•
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp; •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE
+            GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF
+            &nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;•
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp; •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE
+            GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF
+            &nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;•
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp; •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE
+            GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF
+            &nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;•
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp; •
+            &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE GET ONE 50% OFF• &nbsp;&nbsp;&nbsp;&nbsp; TRAVEL TEES: BUY ONE
+            GET ONE 50% OFF &nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="bg">
+        <video
+            src="https://westernrise.com/cdn/shop/videos/c/vp/9cc3d6a8e3fc45c594e7626436607c0e/9cc3d6a8e3fc45c594e7626436607c0e.HD-1080p-2.5Mbps-53309908.mp4?v=0"
+            loop autoplay muted style=" z-index: -2;"></video>
+        <div class="bda">
+            <div class="dibba1">
+                <p>Shop</p>
+                <p>Explore</p>
+               <a href="contact.html" style="color: white; text-decoration: none;"><p>Support</p></a> 
+            </div>
+            <div class="dibba2"><img src="https://westernrise.com/cdn/shop/files/logo-white.svg?v=1691760370&width=256"
+                    alt=""></div>
+            <div class="dibba3">
+                <p>INR ₹</p>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im0xMi41OTMgMjMuMjU4bC0uMDExLjAwMmwtLjA3MS4wMzVsLS4wMi4wMDRsLS4wMTQtLjAwNGwtLjA3MS0uMDM1cS0uMDE2LS4wMDUtLjAyNC4wMDVsLS4wMDQuMDFsLS4wMTcuNDI4bC4wMDUuMDJsLjAxLjAxM2wuMTA0LjA3NGwuMDE1LjAwNGwuMDEyLS4wMDRsLjEwNC0uMDc0bC4wMTItLjAxNmwuMDA0LS4wMTdsLS4wMTctLjQyN3EtLjAwNC0uMDE2LS4wMTctLjAxOG0uMjY1LS4xMTNsLS4wMTMuMDAybC0uMTg1LjA5M2wtLjAxLjAxbC0uMDAzLjAxMWwuMDE4LjQzbC4wMDUuMDEybC4wMDguMDA3bC4yMDEuMDkzcS4wMTkuMDA1LjAyOS0uMDA4bC4wMDQtLjAxNGwtLjAzNC0uNjE0cS0uMDA1LS4wMTgtLjAyLS4wMjJtLS43MTUuMDAyYS4wMi4wMiAwIDAgMC0uMDI3LjAwNmwtLjAwNi4wMTRsLS4wMzQuNjE0cS4wMDEuMDE4LjAxNy4wMjRsLjAxNS0uMDAybC4yMDEtLjA5M2wuMDEtLjAwOGwuMDA0LS4wMTFsLjAxNy0uNDNsLS4wMDMtLjAxMmwtLjAxLS4wMXoiLz48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Im01LjAzIDEzLjcwMWwuNzEtNS42OWEzIDMgMCAwIDEgMy41NjYtMi41N2MuODU3LjE3MiAxLjgxOC41MiAyLjY5NC41MnMxLjgzNy0uMzQ4IDIuNjk0LS41MmEzIDMgMCAwIDEgMy41NjUgMi41N2wuNzEyIDUuNjlDMjAuMTA3IDEzLjk4NSAyMiAxNC41MzUgMjIgMTZjMCAxLjU5Ni0yLjIxMyAyLjEyMi0zLjQyIDIuMzljLTEuNzE4LjM4Mi00LjA0NC42MS02LjU4LjYxcy00Ljg2Mi0uMjI4LTYuNTgtLjYxQzQuMjEyIDE4LjEyMiAyIDE3LjU5NiAyIDE2YzAtMS40NjUgMS44OTMtMi4wMTUgMy4wMy0yLjI5OU03LjcyNSA4LjI2YTEgMSAwIDAgMSAxLjE4OS0uODU3Yy45OTkuMiAyLjA2LjU1OCAzLjA4Ni41NThzMi4wODctLjM1OCAzLjA4Ni0uNTU4YTEgMSAwIDAgMSAxLjE4OS44NTdsLjYzMSA1LjA1NEMxNS40NjcgMTMuMTEzIDEzLjc4NiAxMyAxMiAxM3MtMy40NjcuMTEzLTQuOTA2LjMxM3ptLTEuODcyIDguMTc5Yy0xLjU1My0uMzQ1LTEuNTUzLS41MzEgMC0uODc2QzcuMzkxIDE1LjIyIDkuNTY1IDE1IDEyIDE1czQuNjA5LjIyIDYuMTQ3LjU2MmMxLjU1My4zNDUgMS41NTMuNTMgMCAuODc2QzE2LjYwOSAxNi43OCAxNC40MzUgMTcgMTIgMTdzLTQuNjA5LS4yMi02LjE0Ny0uNTYyWiIvPjwvZz48L3N2Zz4="
+                    alt="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMS43MSAyMC4yOUwxOCAxNi42MUE5IDkgMCAxIDAgMTYuNjEgMThsMy42OCAzLjY4YTEgMSAwIDAgMCAxLjQyIDBhMSAxIDAgMCAwIDAtMS4zOU0xMSAxOGE3IDcgMCAxIDEgNy03YTcgNyAwIDAgMS03IDciLz48L3N2Zz4="
+                    alt="">
+               <a href="login.html"> <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIxIj48cGF0aCBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNNCAxOGE0IDQgMCAwIDEgNC00aDhhNCA0IDAgMCAxIDQgNGEyIDIgMCAwIDEtMiAySDZhMiAyIDAgMCAxLTItMloiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjMiLz48L2c+PC9zdmc+"
+                    alt=""></a>
+            </div>
+        </div>
+        <p style="color: white; position: absolute; left: 5vw; top: 25vw; font-weight: bold; font-size: 1.8vw;">TRAVEL
+            TEES: <br>
+            BUY ONE GET ONE 50% OFF</p>
+        <p style="position: absolute; left: 5vw; top: 34vw; color: white;">ENDS NOV 2.</p>
+        <a href="" style="position: absolute; left: 87vw; top: 25vw; color: white;">SHOP NOW</a>
+    </div>
+    <div class="cloth">
+        <div class="kapda">
+            <div class="shirt shirt1"></div>
+            <p>Centra Tee</p>
+            <p class="aa" style="margin-top: 1.6vw; font-size: .9vw;">Rs. 1100</p>
+
+        </div>
+        <div class="kapda">
+            <div class="shirt shirt2">
+                <img class="img-default"
+                    src="https://westernrise.com/cdn/shop/files/15_e3b78030-6c72-4bb6-84a2-027b65ea156a.jpg?v=1754439137&width=500">
+                <img class="img-hover"
+                    src="https://westernrise.com/cdn/shop/files/WESTERNR.1410.jpg?v=1754439137&width=300">
+
+            </div>
+            <p>Ventra Camp Shirt</p>
+            <p class="aa" style="margin-top: 1.6vw;font-size: .9vw;">Rs. 11,200</p>
+        </div>
+        <div class="kapda">
+            <div class="shirt shirt3">
+                <img class="img-default"
+                    src="https://westernrise.com/cdn/shop/files/Artboard_4.png?v=1756236328&width=500">
+                <img class="img-hover"
+                    src="https://westernrise.com/cdn/shop/files/WESTERNR.1527.jpg?v=1756229865&width=300">
+
+            </div>
+            <p>Evolution Pant Classic</p>
+            <p class="aa" style="margin-top: 1.6vw;font-size: .9vw;">Rs. 1100</p>
+        </div>
+        <div class="kapda">
+            <div class="shirt shirt4">
+                <img class="img-default" src="https://westernrise.com/cdn/shop/files/33.jpg?v=1754468075&width=500">
+                <img class="img-hover"
+                    src="https://westernrise.com/cdn/shop/files/030821-WR-ECOM-Kevin-16047.jpg?v=1754468075&width=300">
+
+            </div>
+            <p>Classic sleeves</p>
+            <p class="aa" style="margin-top: 1.6vw;font-size: .9vw;">Rs. 10,100</p>
+        </div>
+        <div class="kapda">
+            <div class="shirt shirt5">
+                <img class="img-default"
+                    src="https://westernrise.com/cdn/shop/files/Lecation_X_Ctoon_Tee_Regular_Studio_Flats_3_1.webp?v=1754475080&width=500">
+                <img class="img-hover"
+                    src="https://westernrise.com/cdn/shop/files/WESTERNR.2029.jpg?v=1754475080&width=300">
+
+            </div>
+            <p>Simple BlacK Tee</p>
+            <p class="aa" style="margin-top: 1.6vw;font-size: .9vw;">Rs. 1100</p>
+        </div>
+
+    </div>
+    <div class="return">
+        <img src="https://cdn.shopify.com/s/files/1/0696/1303/files/Magazine_logo_01_white_1.png" alt="">
+        <p style="text-align: center; color: white; margin-top: 2vw;">A PUBLICATION BY WESTERN RISE</p>
+        <p style="color: white; position: absolute;left: 45vw; bottom: 2vh;"><u>EXPLORE MORE</u></p>
+    </div>
+    <div class="cards">
+        <div class="top1 top">
+            <p style="margin-top: 20vh;font-size: 1.7vw; font-weight: 700;">TOPS</p>
+            <p style="font-size: .8vw; margin-top: 1vw;">FOR GETTING LOST ON PURPOSE</p>
+        </div>
+        <div class="top2 top">
+            <P style="margin-top: 20vh;font-size: 1.7vw; font-weight: 700;">BOTTOMS</P>
+            <P style="font-size: .8vw; margin-top: 1vw;">MADE FOR FLIGHTS, NIGHTS, AND ESCAPE ROUTES</P>
+        </div>
+        <div class="top3 top">
+            <p style="margin-top: 20vh;font-size: 1.7vw; font-weight: 700;">BAGS</p>
+            <P style="font-size: .8vw; margin-top: 1vw;">ESSENTIAL FOR LONG WAY HOME</P>
+        </div>
+    </div>
+    <div class="escape">
+        <p style="font-size: 2vw; font-weight: 600; padding-top: 40vh;">THE ESCAPE COLLECTION</p>
+        <P style="padding-top: 4vh; padding-bottom: 30vh;">CRAFTED TO SURVIVE RED-EYE FLIGHTS, JUNGLE TRAINS, ROOFTOP
+            BEERS,<br>
+            HANG-DRIED MORNINGS, AND QUESTIONABLE DECISIONS.</P>
+        <a href="" style="color: white; ">SHOP NEW</a>
+    </div>
+    <div class="cards">
+        <div class="top4 top">
+            <p style="margin-top: 20vh;font-size: 1.7vw; font-weight: 700;">VENTRA</p>
+            <p style="font-size: .8vw; margin-top: 1vw;">FOR GETTING LOST ON PURPOSE</p>
+        </div>
+        <div class="top5 top">
+            <P style="margin-top: 20vh;font-size: 1.7vw; font-weight: 700;">EVOLUTION</P>
+            <P style="font-size: .8vw; margin-top: 1vw;">MADE FOR FLIGHTS, NIGHTS, AND ESCAPE ROUTES</P>
+        </div>
+        <div class="top6 top">
+            <p style="margin-top: 20vh;font-size: 1.7vw; font-weight: 700;">BREEZELINEN</p>
+            <P style="font-size: .8vw; margin-top: 1vw;">ESSENTIAL FOR LONG WAY HOME</P>
+        </div>
+    </div>
+    <div class="last"></div>
+    <hr>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>JOIN WESTERN RISE</h3>
+                <p>ESCAPE THE ORDINARY. TRAVEL PHILOSOPHY, PACKING GUIDES, AND INSPIRATION FOR THE ROAD LESS TRAVELED.
+                </p>
+                <form class="email-form">
+                    <input type="email" placeholder="E-MAIL*" required>
+                    <button>&#8594;</button>
+                </form>
+            </div>
+
+            <div class="footer-column">
+                <h3>CONCIERGE</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">CUSTOMER SUPPORT</a></li>
+                    <li><a href="#">START A RETURN</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>EXPLORE</h3>
+                <ul>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">STORY</a></li>
+                    <li><a href="#">JOURNAL</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>SOCIAL</h3>
+                <ul>
+                    <li><a href="#">INSTAGRAM</a></li>
+                    <li><a href="#">FACEBOOK</a></li>
+                    <li><a href="#">TIKTOK</a></li>
+                    <li><a href="#">YOUTUBE</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
