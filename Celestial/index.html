@@ -78,6 +78,8 @@
         }
 
         .read {
+             position: relative;      
+    overflow: hidden;    
             border: 1px solid rgb(196, 0, 0);
             width: 14vw;
             height: 8vh;
@@ -85,12 +87,18 @@
             justify-content: center;
             align-items: center;
             margin: 1vw;
+            cursor: pointer;
+            z-index: 1;
         }
 
         .read p {
             color: rgb(196, 0, 0);
             font-size: 150%;
+            transition: color 0.4s ease;
+            z-index: 2;
+               position: relative; 
         }
+
 
         .cel {
             display: flex;
@@ -171,113 +179,159 @@
             position: absolute;
             left: 38vw;
         }
-        .what{
+
+        .what {
             display: flex;
             width: 100%;
             height: 95vh;
         }
-        .The{
+
+        .The {
             position: relative;
             width: 70%;
         }
-         .im{
+
+        .im {
             transform: rotate(180deg);
             position: absolute;
             top: 30vh;
 
         }
-        
-        .The p{
-             font-size: 200%;
-             margin: 2vw;
-             word-spacing: .5vw;
-             line-height: 6vh;
+
+        .The p {
+            font-size: 200%;
+            margin: 2vw;
+            word-spacing: .5vw;
+            line-height: 6vh;
         }
-        .in{
+
+        .in {
             position: absolute;
             top: 30vh;
             left: 50vw;
         }
-        #po{
+
+        #po {
             color: cyan;
             font-size: 1vw;
             margin-left: 24vw;
         }
-        .foot{
+
+        .foot {
             display: flex;
         }
-        .foot p{
+
+        .foot p {
             font-size: 1.2vw;
         }
-        .foot img{
+
+        .foot img {
             margin-right: 2vw;
         }
-        .foot a{
+
+        .foot a {
             color: white;
             margin: 2vw;
         }
-@media (max-width: 600px) {
-    .nav img{
-        width: 40vw;
-        height: 5vh;
-    }
-    .nav p{
-        display: none;
-    }
-    .bg{
-        height: 35vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .bg video{
-        margin-top: 5vh;
-        width: 100%;
-        height: 100%;
-        
-    }
-   .read{
-    width: 90%;
-    height: 4vh;
-   }
-   .text{
-   display: flex;
-   }
-   .card1{
- display: block;
- height: 45vh;
-   }
-   .card1 .vid{
-    width: 100%;
-   }
-   .main{
-    height: 400vh;
-   }
-   .dibba{
-    font-size: 80%;
-   }
-   .The p{
-    font-size: 90%;
-    line-height: 3vh;
-   }
-   .The img{
-    display: none;
-   }
-   .The{
-    height: 60vh;
-   }
- .foot{
-    display: block;
- }
- .foot p{
-    font-size: large;
- }
- .foot a{
-    margin: 2vw;
- }
-}
-        
+
+        .read::before {
+            content: "";
+position: absolute;  
+    left: 0;
+    bottom: 0;
+            width: 100%;
+            height: 0%;
+            background: rgb(196, 0, 0);
+            transition: height 0.4s ease;
+            z-index: 1;
+        }
+
+   
+        .read:hover::before {
+            height: 100%;
+        }
+
+        .read:hover p {
+            color: white;
+        }
+
+
+        @media (max-width: 600px) {
+            .nav img {
+                width: 40vw;
+                height: 5vh;
+            }
+
+            .nav p {
+                display: none;
+            }
+
+            .bg {
+                height: 35vh;
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .bg video {
+                margin-top: 5vh;
+                width: 100%;
+                height: 100%;
+
+            }
+
+            .read {
+                width: 90%;
+                height: 4vh;
+            }
+
+            .text {
+                display: flex;
+            }
+
+            .card1 {
+                display: block;
+                height: 45vh;
+            }
+
+            .card1 .vid {
+                width: 100%;
+            }
+
+            .main {
+                height: 400vh;
+            }
+
+            .dibba {
+                font-size: 80%;
+            }
+
+            .The p {
+                font-size: 90%;
+                line-height: 3vh;
+            }
+
+            .The img {
+                display: none;
+            }
+
+            .The {
+                height: 60vh;
+            }
+
+            .foot {
+                display: block;
+            }
+
+            .foot p {
+                font-size: large;
+            }
+
+            .foot a {
+                margin: 2vw;
+            }
+        }
     </style>
 
 </head>
@@ -295,8 +349,12 @@
             <p>Solutions</p>
             <p>Team</p>
             <p>Careers</p>
-           <a href="about.html" style="color: white; text-decoration: none;"><p>About</p></a>
-            <a href="contact.html" style="color: white;text-decoration: none;"><p>Contact</p></a>
+            <a href="about.html" style="color: white; text-decoration: none;">
+                <p>About</p>
+            </a>
+            <a href="contact.html" style="color: white;text-decoration: none;">
+                <p>Contact</p>
+            </a>
 
         </div>
     </div>
@@ -388,31 +446,40 @@
                 </div>
             </div>
         </div>
-<div class="what">
-   <div class="dibba">
-            <p>What our <br><span>industry is <br>saying.</span></p>
+        <div class="what">
+            <div class="dibba">
+                <p>What our <br><span>industry is <br>saying.</span></p>
+            </div>
+            <div class="The">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg=="
+                    alt="" class="im">
+                <p>"The transformative potential of <br> Celestial AI's Photonic Fabric for AI <br>Computing, Ntworking
+                    and Memory <br> Solutions stands to be significant as <br> THE IMPACT OPENAI's GPT has had on <br>
+                    AI models. The Photonic Fabric <br> technology platform introduces a <br>revolutionary suite of
+                    architectural tools <br>for optical interconnectivity that extend <br> from AI accelerator and GPU
+                    packages <br> to hyperscale AI clusters. I look forward <br> to collaborating with the team as they
+                    <br>
+                    continue to positively distrupt the <br> industry."</p>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg=="
+                    alt="" class="in">
+            </div>
+
         </div>
-        <div class="The">
-            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg==" alt="" class="im">
-            <p>"The transformative potential of <br> Celestial AI's Photonic Fabric for AI <br>Computing, Ntworking and Memory <br> Solutions stands to be significant as <br> THE IMPACT OPENAI's GPT has had on <br> AI models. The Photonic Fabric <br> technology platform introduces a <br>revolutionary suite of architectural tools <br>for optical interconnectivity that extend <br> from AI accelerator and GPU packages <br> to hyperscale AI clusters. I look forward <br> to collaborating with the team as they <br>
-            continue to positively distrupt the <br> industry."</p>
-             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg==" alt="" class="in">
+        <p id="po" style="height: 20vh;">Thomas Tull , Chairman of USIT</p>
+        <div class="foot">
+            <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/37f07ae2-8a8f-4562-8aae-09d54c942dd3/c.png?format=300w"
+                alt="">
+            <p>Celestial AI <br>
+                2962 Bunker Hill Lane, Suite 200 <br>
+                Santa Clara, CA 95054, USA</p>
+            <a href="">Careers</a>
+            <a href="">Solutions</a>
+            <a href="">Team</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
         </div>
-      
-</div>
-  <p id="po" style="height: 20vh;">Thomas Tull , Chairman of USIT</p>
-  <div class="foot">
-    <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/37f07ae2-8a8f-4562-8aae-09d54c942dd3/c.png?format=300w" alt="">
-    <p>Celestial AI <br>
-2962 Bunker Hill Lane, Suite 200 <br>
-Santa Clara, CA 95054, USA</p>
-<a href="">Careers</a>
-<a href="">Solutions</a>
-<a href="">Team</a>
-<a href="">About</a>
-<a href="">Contact</a>
-  </div>
-  <p style="font-size: 1vw; text-align: center;">Photonic Fabric is a trademark of Celestial AI. © 2025 Celestial AI. All rights reserved.</p>
+        <p style="font-size: 1vw; text-align: center;">Photonic Fabric is a trademark of Celestial AI. © 2025 Celestial
+            AI. All rights reserved.</p>
 
     </div>
     <script src="index.js">
