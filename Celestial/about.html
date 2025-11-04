@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+
+            background-color: black;
+        }
+
+        .nav {
+            display: flex;
+            position: absolute;
+            top: 2vh;
+            color: white;
+            margin: 1vw;
+            overflow-x: hidden;
+
+        }
+
+        .nav img {
+            width: 15vw;
+            height: 6vh;
+            margin-left: 2vw;
+        }
+
+        .nav p {
+            margin: 1.5vw;
+        }
+
+        .main {
+            height: auto;
+            width: 100%;
+            margin-top: 10vh;
+            margin-left: 3.3vw;
+        }
+
+        .main video {
+            width: 100%;
+        }
+
+        .main p {
+            font-size: 600%;
+            color: white;
+            margin-bottom: 5vh;
+        }
+
+        .para p {
+            color: white;
+            font-size: 130%;
+            margin: 2vw;
+        }
+
+        .para {
+            margin: 3vw;
+        }
+
+        .news {
+            margin: 3vw;
+            display: flex;
+            width: 100%;
+            height: auto;
+        }
+
+        .news p {
+            color: white;
+            font-size: 130%;
+            margin: 2vw;
+        }
+
+        .one {
+            width: 33%;
+        }
+
+        .one p {
+            font-size: 350%;
+        }
+
+        .two {
+            width: 25%;
+        }
+
+        .two p {
+            color: aqua;
+        }
+
+        .three {
+            width: 33%;
+            display: block;
+        }
+
+        .three a {
+            color: white;
+            margin: 2vw;
+            margin-right: 2vw;
+            display: block;
+            width: 100%;
+        }
+
+        .investors {
+            display: flex;
+            width: 100%;
+            height: auto;
+            margin: 3vw;
+        }
+
+        .q {
+            width: 40%;
+        }
+
+        .q p {
+            color: white;
+            line-height: 5vh;
+        }
+
+        .e {
+            width: 60%;
+        }
+
+        .e img {
+            width: 15vw;
+            margin-bottom: 2vh;
+        }
+
+        .location {
+            width: 100%;
+            display: flex;
+            height: 100vh;
+            margin: 3vw;
+        }
+
+        .us p {
+            font-size: 150%;
+            color: white;
+            line-height: 4vh;
+            margin-top: 5vh;
+        }
+
+        .us {
+            width: 30%;
+            margin: 3vw;
+            position: relative;
+        }
+
+        .us img {
+            position: absolute;
+            top: 40vh;
+        }
+
+        .big {
+            overflow: hidden;
+        }
+
+        .foot {
+            display: flex;
+            margin: 4vw;
+        }
+
+        .foot p {
+            font-size: 1.2vw;
+            color: white;
+        }
+
+        .foot img {
+            margin-right: 2vw;
+        }
+
+        .foot a {
+            color: white;
+            margin: 2vw;
+        }
+
+
+        @media (max-width: 600px) {
+            .nav img {
+                width: 50%;
+                margin-right: 40%;
+                margin-left: 25%;
+            }
+
+            .nav {
+                flex-wrap: wrap;
+            }
+
+            .main p {
+                font-size: 210%;
+                margin-top: 15vh;
+            }
+
+            .news {
+                display: flex;
+
+            }
+            .news p{
+                font-size: 140%;
+                margin-bottom: 7vh;
+            }
+            .e img{
+                width: 25vw;
+            }
+            .us img{
+                height: 20vw;
+                position: absolute;
+                top: 75vh;
+            }
+            .foot{
+                display: block;
+            }
+            .foot p{
+                font-size: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <div class="nav">
+            <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/1617340624517-7VQMOQAZS6XWANFMXWIU/2021_Celestial_logo-white.png?format=1500w"
+                alt="">
+            <a href="index.html" style="color: white; text-decoration: none;">
+                <p>Home</p>
+            </a>
+            <p>Solutions</p>
+            <p>Team</p>
+            <p>Careers</p>
+            <p>About</p>
+            <a href="contact.html" style="color: white; text-decoration: none;">
+                <p>Contact</p>
+            </a>
+        </div>
+        <div class="main">
+            <p>We're enabling the next <br>
+                <span style="font-size: 120%;">generation of computing.</span>
+            </p>
+            <video
+                src="https://res.cloudinary.com/duxr6irjz/video/upload/v1762151966/Firefly_create_a_video_with_from_the_provided_image_and_make_it_in_a_way_that_it_starts_from_where_i_l39aym.mp4"
+                autoplay muted loop></video>
+        </div>
+        <div class="para">
+            <p>AI is touching our lives and driving breakthroughs in healthcare, finance, autonomous systems, and
+                countless
+                other domains. Its ability to process vast amounts of data, derive insights, and automate complex tasks
+                is
+                unlocking new levels of efficiency and innovation. However, the exponential growth of AI workloads
+                demands
+                ever-greater computational power and more efficient data movement. Traditional electronic interconnects
+                are
+                struggling to keep up, necessitating a paradigm shift in AI infrastructure.</p>
+            <p>The answer is like night and day.</p>
+            <p>Celestial AI’s Photonic Fabric is a revolutionary technology that allows AI compute to be scaled—within
+                package and package-to-package across multiple racks. It serves as the foundation for an optical
+                scale-up
+                network for accelerated computing, leaving behind the physical limitations of electronic interconnects.
+                Offering terabytes of low-latency scale-up bandwidth, in-network computing, and in-network
+                high-performance
+                high-capacity memory, Photonic Fabric heralds a new dawn in AI infrastructure.</p>
+            <p>Switching to optical interconnects enables large multi-die packages and bigger scale-up domains, creating
+                a
+                leap into the next decade. Photonic Fabric-based products revolutionize AI data centers by facilitating
+                large-scale-up domains of thousands of XPUs across multiple racks. This innovation enables continued
+                scaling
+                of model sizes, better reasoning and more efficient inference with increasing context lengths and batch
+                sizes. Reducing the total cost of ownership unleashes new use cases and more profitable GenAI business
+                models.</p>
+            <p>With an aggressive roadmap, a robust ecosystem of partners, and a tier-one supply chain, Celestial AI is
+                not
+                just reimagining AI data centers but delivering on the promise of an AI-driven, brighter, and more
+                sustainable tomorrow. Because at its core, AI isn’t just about algorithms or hardware—it’s about people.
+                It’s about unlocking creativity, solving humanity’s biggest challenges, and making the impossible
+                possible.
+                The future of AI is here, and with the Photonic Fabric, its potential is limitless.</p>
+
+            <p style="color: aqua;">Intelligence, illuminated.™</p>
+        </div>
+        <hr color="aqua" style="margin: 2vw;">
+
+        <div class="news">
+            <div class="one">
+                <p>News and <span style="color: aqua;">Mentioned</span></p>
+            </div>
+            <div class="two">
+                <p>March 11, 2025</p>
+                <p>January 28, 2025</p>
+                <p>December 11, 2024</p>
+                <p>October 22, 2024</p>
+                <p>June 6, 2024</p>
+                <p>April 24, 2024</p>
+                <p>March 27, 2024</p>
+            </div>
+            <div class="three">
+                <a href="">Celestial AI Secures $250M Funding to Revolutionize AI Infrastructure with Its Photonic
+                    Fabric</a>
+
+                <a href="">Celestial AI Announces Appointment of Semiconductor Industry Icon Lip-Bu Tan to Board of
+                    Directors</a>
+
+                <a href="">Celestial AI Wins 2024 Global Semiconductor Alliance Start-Up to Watch Award
+
+                </a>
+
+                <a href="">Celestial AI Acquires Rockley Photonics Patent Portfolio, Strengthening Photonic Fabric™
+                    IP</a>
+                <a href="">Celestial AI Announces Appointment of Kelyn Brannon as CFO</a>
+
+                <a href="">Celestial AI Announces Appointment of Diane Bryant to Board of Directors
+
+                </a>
+                <a href="">Celestial AI Closes $175 Million Series C Funding Round Led by U.S. Innovative Technology
+                    Fund</a>
+            </div>
+        </div>
+
+        <div class="investors">
+            <div class="q">
+                <p style="font-size: 250%; margin-bottom: 5vh;">Our <span style="color: aqua;">Investors</span></p>
+                <p>Celestial AI is backed by a team of top-tier investors. Their belief in our vision and dedication to
+                    supporting our mission has been invaluable in shaping our path to success.</p>
+            </div>
+            <div class="e">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/d572e4da-b9ea-4d9a-9666-0110ee371533/fidelity.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/b58afa3e-cb45-45fd-bc06-627f345d8cc7/blackrock.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/840226c2-0ffa-417a-b7fd-23d2aef11842/maverick.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/87ea1d32-3ab0-4d52-b166-62324638b097/tiger.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/ce883ef3-a5da-4d67-b8a7-ace0e8fa800c/penguin.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/52732b5b-6ced-4cc5-a40c-d50da8ef36a7/porsche.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/5a5b328d-8984-428e-bbec-c60fc0a99454/koch.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/0c850d48-833a-4484-a6be-ba13a9b2c610/usit.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/0cc48013-0b8a-48b0-9b03-476fff861656/iag2.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/e32e1372-e2c6-4f2a-88d0-fff8a297b9e2/temasek.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/b6f7e4d9-14a0-44bd-9816-e83bfb25946c/amd.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/a0d5c18c-f24c-4413-9e0a-d8bcd60e8018/samsung.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/ed1b9c74-3128-4145-ab76-55367bda71e1/xora.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/aea423dd-47e0-4403-bc1a-c7c144486a73/xpand.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/bf72fc06-4941-4305-a955-7ca729fe26a6/engine.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/70f60ac5-7965-493a-8ca5-fd376fbfa040/tyche.png?format=300w"
+                    alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/2fd72ac8-039f-4f0f-b2b4-2d795fa90bcd/m-ventures.png?format=300w"
+                    alt="">
+            </div>
+        </div>
+
+        <hr color="aqua" style="margin: 2vw;">
+        <p>Our <span>Locations</span></p>
+        <div class="location">
+            <div class="us">
+                <p style="color: aqua;font-size: 300%;">USA</p>
+                <p>2962 Bunker Hill Lane, Suite 200 <br>
+                    Santa Clara, CA 95054</p>
+                <p>500 Technology Drive, Suite 480 <br>
+                    Irvine, CA 92618</p>
+                <img src="https://res.cloudinary.com/duxr6irjz/image/upload/v1762230704/download_kshybg.png" alt="">
+            </div>
+
+            <div class="us">
+                <p style="color: aqua;font-size: 300%;">Canada</p>
+                <p>20 Toronto Street, Suite #420 <br>
+                    Toronto, Ontario M5C 2B8</p>
+
+                <img src="https://res.cloudinary.com/duxr6irjz/image/upload/v1762231025/download_2_lguyn6.png" alt="">
+            </div>
+
+            <div class="us">
+                <p style="color: aqua;font-size: 300%;">India</p>
+                <p>Celestial AI India, 1st Floor <br>
+                    Rajapushpa Summit, Financial District <br>
+                    Nanakramguda, Hyderabad 500032</p>
+
+                <img src="https://res.cloudinary.com/duxr6irjz/image/upload/v1762231031/3_f7nuvq.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/37f07ae2-8a8f-4562-8aae-09d54c942dd3/c.png?format=300w"
+            alt="">
+        <p>Celestial AI <br>
+            2962 Bunker Hill Lane, Suite 200 <br>
+            Santa Clara, CA 95054, USA</p>
+        <a href="">Careers</a>
+        <a href="">Solutions</a>
+        <a href="">Team</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+    </div>
+    <p style="font-size: 1vw; text-align: center; color: white;">Photonic Fabric is a trademark of Celestial AI. © 2025
+        Celestial
+        AI. All rights reserved.</p>
+
+    </div>
+</body>
+
+</html>

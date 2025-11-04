@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            background-color: black;
+        }
+
+        .bg {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bg video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+        .nav {
+            display: flex;
+            position: absolute;
+            top: 2vh;
+            color: white;
+            margin: 1vw;
+            overflow-x: hidden;
+
+        }
+
+        .nav img {
+            width: 15vw;
+            height: 6vh;
+            margin-left: 2vw;
+        }
+
+        .nav p {
+            margin: 1.5vw;
+        }
+
+        .main {
+            height: 400vh;
+            width: 100%;
+            background-color: black;
+            padding-left: 4vw;
+            overflow-y: hidden;
+        }
+
+        #this {
+            color: aqua;
+            font-size: 3vw;
+            padding: 1vw;
+            padding-top: 2vw;
+        }
+
+        .main p {
+            color: white;
+            font-size: 200%;
+            padding: 1vw;
+        }
+
+        .read {
+            border: 1px solid rgb(196, 0, 0);
+            width: 14vw;
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1vw;
+        }
+
+        .read p {
+            color: rgb(196, 0, 0);
+            font-size: 150%;
+        }
+
+        .cel {
+            display: flex;
+        }
+
+        .cel p {
+            margin-top: 2.5vw;
+        }
+
+        .card1 {
+            display: flex;
+            width: 100%;
+            height: 40vh;
+            margin-bottom: 20vh;
+        }
+
+        .vid {
+            width: 50%;
+            height: 100%;
+        }
+
+        .vid video {
+            width: 100%;
+        }
+
+        .text span {
+            color: aqua;
+        }
+
+
+        .dibba {
+            font-size: 200%;
+        }
+
+        .dibba2 {
+            font-size: 70%;
+        }
+
+        .text {
+            margin-left: 3vw;
+        }
+
+        .dibba span {
+            color: aqua;
+        }
+
+        .closes {
+            display: flex;
+            width: 100%;
+            height: 40vh;
+        }
+
+        .left {
+            width: 50%;
+            height: 100%;
+        }
+
+        .left p {
+            font-size: 150%;
+        }
+
+        .right {
+            width: 50%;
+            height: 100%;
+            position: relative;
+        }
+
+        .right p {
+            font-size: 150%;
+
+        }
+
+        .left img {
+            transform: rotate(180deg);
+        }
+
+        .right img {
+            position: absolute;
+            left: 38vw;
+        }
+        .what{
+            display: flex;
+            width: 100%;
+            height: 95vh;
+        }
+        .The{
+            position: relative;
+            width: 70%;
+        }
+         .im{
+            transform: rotate(180deg);
+            position: absolute;
+            top: 30vh;
+
+        }
+        
+        .The p{
+             font-size: 200%;
+             margin: 2vw;
+             word-spacing: .5vw;
+             line-height: 6vh;
+        }
+        .in{
+            position: absolute;
+            top: 30vh;
+            left: 50vw;
+        }
+        #po{
+            color: cyan;
+            font-size: 1vw;
+            margin-left: 24vw;
+        }
+        .foot{
+            display: flex;
+        }
+        .foot p{
+            font-size: 1.2vw;
+        }
+        .foot img{
+            margin-right: 2vw;
+        }
+        .foot a{
+            color: white;
+            margin: 2vw;
+        }
+@media (max-width: 600px) {
+    .nav img{
+        width: 40vw;
+        height: 5vh;
+    }
+    .nav p{
+        display: none;
+    }
+    .bg{
+        height: 35vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg video{
+        margin-top: 5vh;
+        width: 100%;
+        height: 100%;
+        
+    }
+   .read{
+    width: 90%;
+    height: 4vh;
+   }
+   .text{
+   display: flex;
+   }
+   .card1{
+ display: block;
+ height: 45vh;
+   }
+   .card1 .vid{
+    width: 100%;
+   }
+   .main{
+    height: 400vh;
+   }
+   .dibba{
+    font-size: 80%;
+   }
+   .The p{
+    font-size: 90%;
+    line-height: 3vh;
+   }
+   .The img{
+    display: none;
+   }
+   .The{
+    height: 60vh;
+   }
+ .foot{
+    display: block;
+ }
+ .foot p{
+    font-size: large;
+ }
+ .foot a{
+    margin: 2vw;
+ }
+}
+        
+    </style>
+
+</head>
+
+
+<body>
+    <div class="bg"><video
+            src="https://res.cloudinary.com/duxr6irjz/video/upload/v1762146129/Video_Generation_From_Website_uh6cx7.mp4"
+            autoplay muted loop></video>
+
+        <div class="nav">
+            <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/1617340624517-7VQMOQAZS6XWANFMXWIU/2021_Celestial_logo-white.png?format=1500w"
+                alt="">
+            <p>Home</p>
+            <p>Solutions</p>
+            <p>Team</p>
+            <p>Careers</p>
+           <a href="about.html" style="color: white; text-decoration: none;"><p>About</p></a>
+            <a href="contact.html" style="color: white;text-decoration: none;"><p>Contact</p></a>
+
+        </div>
+    </div>
+    <div class="main">
+        <p id="this">This just in.</p>
+        <p>Celestial AI Closes Final Series C1 Round to Accelerate <br>
+            Next-Generation AI Computing</p>
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg=="
+            alt="">
+
+        <div class="read">
+            <p>READ MORE</p>
+        </div>
+        <div class="cel">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg=="
+                alt="">
+            <p>Celestial AI Announces Appointment of Semiconductor Icon <br>
+                Lip-Bu Tan to Board of Directors.</p>
+
+        </div>
+        <div class="read" style="margin-bottom: 3vw;">
+            <p>READ MORE</p>
+        </div>
+
+        <div class="card1">
+            <div class="vid">
+                <video src="https://res.cloudinary.com/duxr6irjz/video/upload/v1762150304/thumb_vid_ffssv7.mp4" autoplay
+                    muted loop>
+
+                </video>
+            </div>
+            <div class="text">
+                <div class="dibba">
+                    <p><span>Illuminating</span> the <br>way for what <br> comes next.</p>
+                </div>
+                <div class="dibba2">
+                    <p>We’re revolutionizing how data moves by <br>harnessing light.</p>
+                </div>
+                <div class="read">
+                    <p>EXPLORE</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="card1">
+
+            <div class="text">
+                <div class="dibba">
+                    <p><span>There's no limit to</span> where <br> we can go.</p>
+                </div>
+                <div class="dibba2">
+                    <p>By redefining optical interconnects for AI compute scaling, <br>we deliver transformative AI
+                        system performance, bringing a <br> new dawn in AI infrastructure</p>
+                </div>
+
+            </div>
+            <div class="vid">
+                <video
+                    src="https://res.cloudinary.com/duxr6irjz/video/upload/v1762151966/Firefly_create_a_video_with_from_the_provided_image_and_make_it_in_a_way_that_it_starts_from_where_i_l39aym.mp4"
+                    autoplay muted loop>
+
+                </video>
+            </div>
+
+
+        </div>
+        <div class="dibba">
+            <p>Other <span>recent news.</span></p>
+        </div>
+        <div class="closes">
+            <div class="left">
+                <p>Celestial AI Closes $175 Million Series C Funding <br> Round Led by U.S. Innovative Technology Fund
+                </p>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg=="
+                    alt="">
+                <div class="read" style="margin-bottom: 3vw;">
+                    <p>READ MORE</p>
+                </div>
+            </div>
+            <div class="right">
+                <p>Celestial AI Announces Photonic Fabric Adoption <br> by Lead Hyperscaler Customers</p>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg=="
+                    alt="">
+
+                <div class="read" style="margin-bottom: 3vw;margin-top: 3vw;">
+                    <p>READ MORE</p>
+                </div>
+            </div>
+        </div>
+<div class="what">
+   <div class="dibba">
+            <p>What our <br><span>industry is <br>saying.</span></p>
+        </div>
+        <div class="The">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg==" alt="" class="im">
+            <p>"The transformative potential of <br> Celestial AI's Photonic Fabric for AI <br>Computing, Ntworking and Memory <br> Solutions stands to be significant as <br> THE IMPACT OPENAI's GPT has had on <br> AI models. The Photonic Fabric <br> technology platform introduces a <br>revolutionary suite of architectural tools <br>for optical interconnectivity that extend <br> from AI accelerator and GPU packages <br> to hyperscale AI clusters. I look forward <br> to collaborating with the team as they <br>
+            continue to positively distrupt the <br> industry."</p>
+             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg==" alt="" class="in">
+        </div>
+      
+</div>
+  <p id="po" style="height: 20vh;">Thomas Tull , Chairman of USIT</p>
+  <div class="foot">
+    <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/37f07ae2-8a8f-4562-8aae-09d54c942dd3/c.png?format=300w" alt="">
+    <p>Celestial AI <br>
+2962 Bunker Hill Lane, Suite 200 <br>
+Santa Clara, CA 95054, USA</p>
+<a href="">Careers</a>
+<a href="">Solutions</a>
+<a href="">Team</a>
+<a href="">About</a>
+<a href="">Contact</a>
+  </div>
+  <p style="font-size: 1vw; text-align: center;">Photonic Fabric is a trademark of Celestial AI. © 2025 Celestial AI. All rights reserved.</p>
+
+    </div>
+    <script src="index.js">
+
+    </script>
+</body>
+
+</html>
