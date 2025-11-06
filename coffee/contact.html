@@ -230,6 +230,120 @@
             width: 25vw;
         }
 
+          @media (max-width: 600px) {
+            .bg {
+                height: 40vh;
+
+            }
+
+            .photo {
+                height: 40vh;
+            }
+
+            .photos {
+                height: 40vw;
+            }
+
+            .float1 {
+                top: 0vh;
+                left: 25vw;
+                width: 18vw;
+            }
+
+            .logo {
+                height: 8vh;
+                justify-content: center;
+                padding: 0 5vw;
+                display: block;
+                width: 90%;
+            }
+
+            .logo img {
+                width: 80vw;
+            }
+
+
+            /* Hide normal nav and show hamburger */
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: white;
+                position: absolute;
+                top: 8vh;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                padding: 2vh 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links p {
+                color: black;
+                font-size: 3.5vw;
+                padding: 2vh 0;
+                margin: 0;
+                border-bottom: 1px solid #ddd;
+            }
+
+            /* Hamburger Icon */
+            .hamburger {
+                display: block;
+                position: absolute;
+                right: 5vw;
+                top: 2vh;
+                font-size: 6vw;
+                color: white;
+                cursor: pointer;
+                z-index: 10;
+            }
+
+            /* When logo background turns white, hamburger turns black */
+            .logo.scrolled .hamburger,
+            .logo:hover .hamburger {
+                color: black;
+            }
+
+            /* Hide download + language text on small screens */
+            .down,
+            .logo>p:last-child {
+                display: none;
+            }
+
+
+            .down {
+                width: auto;
+                margin-top: 2vw;
+                margin-bottom: 2vw;
+            }
+
+            .photos {
+                width: 70vw;
+                height: 40vh;
+                top: 0;
+            }
+            .big{
+                display: block;
+                height: 90vh;
+            }
+            .one{
+                width: 100%;
+            }
+            .two{
+                width: 100%;
+                display: block;
+                flex-wrap: wrap;
+
+            }
+            #but{
+                display: block;
+                width: 100vw !important;
+            }
+        }
+
+
     </style>
 </head>
 <body>
@@ -240,7 +354,9 @@
 <div class="bg">
         <div class="logo">
             <img src="https://res.cloudinary.com/duxr6irjz/image/upload/v1761547225/generated-image_cxgwv8.png" alt="">
+             <div class="hamburger" onclick="toggleMenu()">☰</div>
             <div class="nav-links">
+                
                <a href="index.html"style="text-decoration: none;">
             <p>HOME</p>
         </a>
@@ -275,7 +391,7 @@
                         <input type="email" name="" id="" placeholder="Your Email">
                         <input type="number" name="" id="" placeholder="Your phone number">
                         <textarea name="" id="" placeholder="Content"></textarea>
-                        <input type="button" name="" id="" value="SEND" style="background-color: rgb(255, 115, 0); width: 7vw; color: white;">
+                        <input type="button" name="" id="but" value="SEND" style="background-color: rgb(255, 115, 0); width: 7vw; color: white;">
                     </div>
     </div>
      <footer class="tch-footer">

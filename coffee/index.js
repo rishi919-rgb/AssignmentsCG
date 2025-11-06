@@ -1,6 +1,10 @@
-    window.addEventListener("scroll", function () {
-        const logo = document.querySelector(".logo");
 
+document.addEventListener("DOMContentLoaded", () => {
+    const logo = document.querySelector(".logo");
+    const floats = document.querySelectorAll(".float");
+
+    // ✅ Scroll event for logo background change
+    window.addEventListener("scroll", () => {
         if (window.scrollY > 500) {
             logo.classList.add("scrolled");
         } else {
@@ -8,15 +12,20 @@
         }
     });
 
-    window.addEventListener("scroll", function () {
-    const floats = document.querySelectorAll(".float");
-    const scrollY = window.scrollY;
+    // ✅ Scroll event for floating images parallax
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
 
-    floats.forEach((img, index) => {
-        const speed = (index + 1) * 0.2; // slightly different speed for each
-        img.style.transform = `translateY(${scrollY * speed * 0.1}px)`;
+        floats.forEach((img, index) => {
+            const speed = (index + 1) * 0.2; // slightly different speed per image
+            img.style.transform = `translateY(${scrollY * speed * 0.1}px)`;
+        });
     });
-});
 
-// USED CHATGPT 4 THIS
+    // ✅ Hamburger toggle for mobile menu
+    window.toggleMenu = function () {
+        const nav = document.querySelector(".nav-links");
+        nav.classList.toggle("active");
+    };
+});
 

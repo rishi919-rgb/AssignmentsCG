@@ -78,8 +78,8 @@
         }
 
         .read {
-             position: relative;      
-    overflow: hidden;    
+            position: relative;
+            overflow: hidden;
             border: 1px solid rgb(196, 0, 0);
             width: 14vw;
             height: 8vh;
@@ -96,7 +96,7 @@
             font-size: 150%;
             transition: color 0.4s ease;
             z-index: 2;
-               position: relative; 
+            position: relative;
         }
 
 
@@ -236,9 +236,9 @@
 
         .read::before {
             content: "";
-position: absolute;  
-    left: 0;
-    bottom: 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
             width: 100%;
             height: 0%;
             background: rgb(196, 0, 0);
@@ -246,7 +246,7 @@ position: absolute;
             z-index: 1;
         }
 
-   
+
         .read:hover::before {
             height: 100%;
         }
@@ -257,9 +257,20 @@ position: absolute;
 
 
         @media (max-width: 600px) {
+            #onep {
+                font-size: 120%;
+            }
+            #twop{
+                font-size: 120%;
+            }
+            .vid{
+                height: auto;
+            }
+
             .nav img {
                 width: 40vw;
                 height: 5vh;
+               
             }
 
             .nav p {
@@ -272,12 +283,12 @@ position: absolute;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                position: relative;
             }
 
             .bg video {
-                margin-top: 5vh;
-                width: 100%;
-                height: 100%;
+                margin-top: 5vh; 
+              
 
             }
 
@@ -287,12 +298,24 @@ position: absolute;
             }
 
             .text {
-                display: flex;
+                display: block;
+            }
+            .text p{
+                font-size: 150%;
             }
 
             .card1 {
                 display: block;
-                height: 45vh;
+                height: 27vh;
+            }
+            #riread{
+                margin-top: 5vh;
+                position: absolute ;
+                top: 18.5vh;
+
+            }
+            .right img{
+                top: 16vh;
             }
 
             .card1 .vid {
@@ -300,7 +323,7 @@ position: absolute;
             }
 
             .main {
-                height: 400vh;
+                height: 250vh;
             }
 
             .dibba {
@@ -310,6 +333,21 @@ position: absolute;
             .The p {
                 font-size: 90%;
                 line-height: 3vh;
+            }
+            .left p{
+                font-size: 130%;
+            }
+            .right p{
+                 font-size: 130%;
+            }
+            .left{
+                height: 30vh;
+            }
+            .right{
+                height: 30vh;
+            }
+            .closes{
+                height: auto;
             }
 
             .The img {
@@ -322,6 +360,7 @@ position: absolute;
 
             .foot {
                 display: block;
+                margin-top: 25vh;
             }
 
             .foot p {
@@ -331,6 +370,19 @@ position: absolute;
             .foot a {
                 margin: 2vw;
             }
+            .what{
+                height: 30vh;
+                margin-top: 5vh;
+            }
+            #po{
+                font-size: 100%;
+                position: absolute;
+                top: 20vh;
+            }
+            .po{
+                position: relative;
+            }
+           
         }
     </style>
 
@@ -360,18 +412,22 @@ position: absolute;
     </div>
     <div class="main">
         <p id="this">This just in.</p>
-        <p>Celestial AI Closes Final Series C1 Round to Accelerate <br>
-            Next-Generation AI Computing</p>
+        <div class="cel">
+       
         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg=="
             alt="">
+             <p id="onep">Celestial AI Closes Final Series C1 Round to Accelerate <br>
+            Next-Generation AI Computing</p>
 
-        <div class="read">
+      
+        </div>
+          <div class="read">
             <p>READ MORE</p>
         </div>
         <div class="cel">
             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg=="
                 alt="">
-            <p>Celestial AI Announces Appointment of Semiconductor Icon <br>
+            <p id="onep">Celestial AI Announces Appointment of Semiconductor Icon <br>
                 Lip-Bu Tan to Board of Directors.</p>
 
         </div>
@@ -441,7 +497,7 @@ position: absolute;
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg=="
                     alt="">
 
-                <div class="read" style="margin-bottom: 3vw;margin-top: 3vw;">
+                <div class="read" id="riread" style="margin-bottom: 3vw;margin-top: 3vw;">
                     <p>READ MORE</p>
                 </div>
             </div>
@@ -459,13 +515,15 @@ position: absolute;
                     architectural tools <br>for optical interconnectivity that extend <br> from AI accelerator and GPU
                     packages <br> to hyperscale AI clusters. I look forward <br> to collaborating with the team as they
                     <br>
-                    continue to positively distrupt the <br> industry."</p>
+                    continue to positively distrupt the <br> industry."
+                </p>
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwYWZmZjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0uNzUgMTJoMjIuNW0tMTAuNSAxMC41TDIzLjI1IDEyTDEyLjc1IDEuNSIvPjwvc3ZnPg=="
                     alt="" class="in">
             </div>
 
         </div>
-        <p id="po" style="height: 20vh;">Thomas Tull , Chairman of USIT</p>
+        <div class="po"> <p id="po" style="height: 20vh;">Thomas Tull , Chairman of USIT</p></div>
+       
         <div class="foot">
             <img src="https://images.squarespace-cdn.com/content/v1/605ffbe6a45fbc5906a819ea/37f07ae2-8a8f-4562-8aae-09d54c942dd3/c.png?format=300w"
                 alt="">

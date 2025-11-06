@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, Helvetica, sans-serif;
-                     
+
 
         }
 
@@ -88,9 +88,8 @@
             display: flex;
             width: 100%;
             background-color: white;
-            height: 50vh;
+            height: 55vh;
             margin-top: 3vw;
-           
             overflow-y: hidden;
         }
 
@@ -322,57 +321,202 @@
             font-size: 13px;
             opacity: 0.6;
         }
-        .kapda p{
+
+        .kapda p {
             justify-self: center;
             font-weight: 600;
             margin-top: 1vw;
-            /* margin-bottom: 3vw; */
-            /* height: 100vh; */
+
+        }
+       
+
+        .aa {
+            margin-top: 0% !important;
         }
 
 
-@media (max-width: 600px) {
-   
-    .shirt {
-        width: 44vw;
-    }
+        @media (max-width: 600px) {
 
-    .shirt img {
-        height: 55vw;
-    }
+            body,
+            html {
+                overflow-x: hidden !important;
+            }
 
-    .shirt p {
-        font-size: 3.5vw;
-    }
+            .scrol p {
+                font-size: 3vw !important;
+            }
 
-    .aa {
-        font-size: 3.2vw !important;
-    }
-    .top{
-        height: 60vh;
-        width: 80%;
-    }
-    .cards{
-        display: block;
-        height: 250vh;
-        margin-left: 9vw;
-    }
-    .escape{
-        height: 50vh;
-        position: relative;
-    }
-    .escape p{
-        position: absolute;
-        top: 20vh;
-        margin-top: 0;
-        padding-bottom: 0;
-        padding-top: 0;
-    }
-    .last{
-        width: 80%;
-        height: 40vh;
-    }
-}
+            .dibba1,
+            .dibba3 {
+                gap: 3vw !important;
+                font-size: 3.5vw !important;
+                top: 2vh !important;
+            }
+
+            .dibba2 img {
+                width: 35vw !important;
+                margin-top: 2vh !important;
+                margin-left: 17vw !important;
+            }
+
+            .dibba1 {
+                left: 3vw !important;
+            }
+
+            .dibba3 {
+                left: 65vw !important;
+                display: block;
+            }
+
+            .dibba3 p {
+                margin-top: 7vw !important;
+            }
+
+            .bg {
+                height: 55vh !important;
+            }
+
+            .bg video {
+                height: 100% !important;
+                width: 100% !important;
+                object-fit: cover !important;
+            }
+
+            .bg p {
+                left: 4vw !important;
+                font-size: 5vw !important;
+            }
+
+            .bg a {
+                left: 70vw !important;
+                font-size: 3.5vw !important;
+                top: 35vh !important;
+            }
+
+            .cloth {
+                flex-wrap: wrap !important;
+                height: auto !important;
+                padding-bottom: 4vh !important;
+                gap: 4vw !important;
+            }
+
+            .kapda {
+                width: 44vw !important;
+                margin-bottom: 4vh !important;
+            }
+
+            .shirt {
+                width: 44vw !important;
+                height: 55vw !important;
+            }
+
+            .shirt img {
+                height: 55vw !important;
+            }
+
+            .kapda p {
+                font-size: 3.4vw !important;
+                margin-top: 1vw !important;
+                text-align: center !important;
+            }
+
+            .aa {
+                font-size: 3.2vw !important;
+            }
+
+            .return {
+                height: 40vh !important;
+                background-size: cover !important;
+            }
+
+            .return img {
+                width: 40vw !important;
+                margin-left: 30vw !important;
+                margin-top: 12vh !important;
+            }
+
+            .return p {
+                font-size: 3.5vw !important;
+                left: 35vw !important;
+            }
+
+            .cards {
+                display: block !important;
+                height: auto !important;
+                margin-left: 10vw !important;
+            }
+
+            .top {
+                width: 75vw !important;
+                height: 45vh !important;
+                margin-bottom: 5vh !important;
+                background-size: cover !important;
+            }
+
+            .top p {
+                font-size: 4vw !important;
+                margin-top: 15vh !important;
+            }
+
+            .top p:nth-child(2) {
+                font-size: 3vw !important;
+            }
+
+            .escape {
+                height: 55vh !important;
+                background-size: cover !important;
+                text-align: center !important;
+            }
+
+            .escape p {
+                font-size: 5vw !important;
+                padding-top: 18vh !important;
+            }
+
+            .escape a {
+                font-size: 4vw !important;
+            }
+
+            .escape p:nth-child(2) {
+                padding-top: 2vh !important;
+                font-size: 3.2vw !important;
+            }
+
+            .last {
+                width: 85vw !important;
+                height: 40vh !important;
+                margin-left: 7vw !important;
+                background-size: cover !important;
+            }
+
+            footer {
+                padding: 40px 0 !important;
+            }
+
+            .footer-container {
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 8vh !important;
+            }
+
+            .footer-column h3 {
+                font-size: 4vw !important;
+            }
+
+
+
+            .email-form input {
+                font-size: 3.2vw !important;
+            }
+
+            .email-form button {
+                font-size: 5vw !important;
+            }
+
+            .footer-bottom p {
+                font-size: 3vw !important;
+            }
+        }
     </style>
 </head>
 
@@ -409,7 +553,9 @@
             <div class="dibba1">
                 <p>Shop</p>
                 <p>Explore</p>
-               <a href="contact.html" style="color: white; text-decoration: none;"><p>Support</p></a> 
+                <a href="contact.html" style="color: white; text-decoration: none;">
+                    <p>Support</p>
+                </a>
             </div>
             <div class="dibba2"><img src="https://westernrise.com/cdn/shop/files/logo-white.svg?v=1691760370&width=256"
                     alt=""></div>
@@ -419,8 +565,9 @@
                     alt="">
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMS43MSAyMC4yOUwxOCAxNi42MUE5IDkgMCAxIDAgMTYuNjEgMThsMy42OCAzLjY4YTEgMSAwIDAgMCAxLjQyIDBhMSAxIDAgMCAwIDAtMS4zOU0xMSAxOGE3IDcgMCAxIDEgNy03YTcgNyAwIDAgMS03IDciLz48L3N2Zz4="
                     alt="">
-               <a href="login.html"> <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIxIj48cGF0aCBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNNCAxOGE0IDQgMCAwIDEgNC00aDhhNCA0IDAgMCAxIDQgNGEyIDIgMCAwIDEtMiAySDZhMiAyIDAgMCAxLTItMloiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjMiLz48L2c+PC9zdmc+"
-                    alt=""></a>
+                <a href="login.html"> <img
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIxIj48cGF0aCBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNNCAxOGE0IDQgMCAwIDEgNC00aDhhNCA0IDAgMCAxIDQgNGEyIDIgMCAwIDEtMiAySDZhMiAyIDAgMCAxLTItMloiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjMiLz48L2c+PC9zdmc+"
+                        alt=""></a>
             </div>
         </div>
         <p style="color: white; position: absolute; left: 5vw; top: 25vw; font-weight: bold; font-size: 1.8vw;">TRAVEL

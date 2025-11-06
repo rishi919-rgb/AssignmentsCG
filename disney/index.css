@@ -426,51 +426,221 @@
         }
 
   @media (max-width: 600px) {
-    .photo{
-        height: 20vh;
+
+    body, html {
+        overflow-x: hidden ;
     }
-      .photo1{
-        height: 20vh;
+
+    .visit {
+        font-size: 3vw ;
+        gap: 3vw ;
     }
-      .photo3{
-        height: 20vh;
+
+    .cruise {
+        font-size: 3.5vw;
+        gap: 3vw;
+        padding: 3vw 0;
     }
-      .photo4{
-        height: 20vh;
+
+    #srch {
+       display: none;
+    }
+
+    .themed {
+        height: 10vh ;
+        gap: 3vw ;
+        font-size: 3.5vw ;
+    }
+
+    .themed img {
+        width: 20vw ;
+    }
+
+    .view {
+       display: none;
+    }
+
+    .vid {
+        height: 40vh ;
+    }
+
+    .vid-content img {
+        width: 40vw ;
+    }
+
+    .vid-content p {
+        font-size: 5vw ;
+    }
+
+    .fst {
+        padding: 0 ;
+        padding-top: 5vh ;
+        width: 90vw ;
+        margin: auto ;
+        font-size: 3vw ;
+        line-height: 4vw ;
+    }
+
+    .images {
+        width: 95vw ;
+        flex-direction: column ;
+        gap: 3vw ;
+        align-items: center ;
+    }
+
+    .images .one {
+        width: 95% ;
+        height: 30vh ;
+        border-radius: 3vw ;
+    }
+
+    .images .two {
+        width: 95% ;
+        display: flex ;
+        gap: 3vw ;
+        justify-content: center ;
+    }
+
+    .images .two img {
+        width: 48% ;
+        height: 15vh ;
+    }
+
+
+
+    .father,
+    .father1 {
+        flex-direction: column ;
+        padding: 0 ;
+    }
+
+    .con,
+    .con1 {
+        width: 90vw ;
+        padding-left: 0 ;
+        margin: auto ;
+        font-size: 3vw ;
+        line-height: 4vw ;
+    }
+
+    .state {
+       display: none;
+    }
+
+    .photo,
+    .photo1,
+    .photo3,
+    .photo4 {
+        width: 90vw ;
+        height: 25vh ;
+        background-size: cover ;
+        margin-bottom: 1vh ;
+    }
+
+    .area {
+        width: 95vw ;
+        margin-left: 0 ;
+        justify-content: center ;
+    }
+
+    .six {
+        width: 40vw;
+        height: 10vh;
+        margin: 2vw;
+        border-radius: 3vw;
+    }
+
+    .six img {
+        height: 5vh ;
+    }
+
+    .six p {
+        font-size: 3vw ;
+    }
+
+    .cyan {
+        height: auto ;
+        padding: 5vh 0 ;
+    }
+
+    .cyan img {
+        width: 50vw ;
+        margin-left: 25vw ;
+    }
+
+    .dibba {
+        width: 90vw ;
+        margin-left: 5vw ;
+    }
+
+    .dibba p {
+        font-size: 3vw ;
+        line-height: 4vw ;
+    }
+
+    .night {
+        flex-wrap: wrap ;
+        justify-content: center ;
+    }
+
+    .pic {
+        width: 40vw;
+        height: auto;
+        margin: 3vw;
+        border-radius: 3vw;
+    }
+
+    .pic img {
+        width: 100% ;
+        height: auto ;
+        border-radius: 3vw ;
+    }
+
+    .pic p {
+        font-size: 3vw ;
+    }
+
+    .para {
+        width: 90vw ;
+        margin-left: 5vw ;
+    }
+
+    .para p {
+        font-size: 3.2vw ;
+    }
+
+    .big {
+        flex-direction: column ;
+        width: 90vw ;
+        margin-left: 5vw ;
+    }
+
+    .small {
+        width: 100% ;
+        font-size: 3vw ;
+    }
+
+    .he {
+        font-size: 3.4vw ;
     }
     .gradient{
-        height: 300vh;
+        height: auto;
     }
-    .pic img{
-        height: 10vh;
+    .gradient p{
+        font-size: 100% !important;
+        gap: 1vw !important;
+        padding: auto !important;
     }
-    .pic{
-        height: 15vh;
+    .lrn{
+        width: 100% !important;
+        font-size: 150% !important;
+        height: 4vh !important;
+        margin-top: 2vh;
+                margin-bottom: 2vh;
+
     }
-  .fst p{
-        font-size: 3vw;
-        padding: 0;
+    .dibba .lrn{
+        display: none !important;
     }
-    .fst{
-        width: 70vw;
-        padding-left: 27vw;
-        padding-right: 0;
-    }
-    .vid img{
-        width: 40vw;
-    }
-    .vid p{
-        font-size: large;
-    }
-    .boook{
-padding-left: 10vw;
-padding-right: 10vw;
-    }
-    .dibba p{
-        font-size: 3vw;
-    }
-    .cyan img{
-        width: 50vw;
-        margin-left: 27vw;
-    }
-  }      
+    
+}

@@ -31,6 +31,10 @@
 
         }
 
+        .hamburger {
+            display: none;
+        }
+
         .logo {
             display: flex;
             height: 10vh;
@@ -588,73 +592,267 @@
         }
 
         @media (max-width: 600px) {
-            .photo{
+            .bg {
+                height: 40vh;
+
+            }
+
+            .photo {
                 height: 40vh;
             }
-            .photos{
+
+            .photos {
                 height: 40vw;
             }
-              .float1 {
-            top: 0vh;
-            left: 25vw;
-            width: 18vw;
-        }
 
-        .float2 {
-            top: 6vh;
-            right: 66vw;
-            width: 18vw;
-        }
+            .float1 {
+                top: 0vh;
+                left: 25vw;
+                width: 18vw;
+            }
 
-        .float3 {
-            top: 3vh;
-            left: 65vw;
-            width: 15vw;
-            height: 4vh;
-        }
+            .logo {
+                height: 8vh;
+                justify-content: center;
+                padding: 0 5vw;
+                display: block;
+                width: 90%;
+            }
 
-        .float4 {
-            top: 4vh;
-            right: 58vw;
-            width: 18vw;
-            z-index: 4;
-        }
+            .logo img {
+                width: 80vw;
+            }
 
-        .float5 {
-            top: 7vh;
-            left: 23vw;
-            width: 18vw;
-            z-index: 1;
-        }
 
-        .float6 {
-            top: 15vh;
-            right: 25vw;
-            width: 10vw;
-        }
+            /* Hide normal nav and show hamburger */
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: white;
+                position: absolute;
+                top: 8vh;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                padding: 2vh 0;
+            }
 
-        .float7 {
-            top: 1vh;
-            right: 24vw;
-            width: 13vw;
-        }
-        .featured{
-            height: 70vw;
-        }
-        .orange{
-            height: 40vh;
-            position: relative;
-        }
-        .written p{
-            position: absolute;
-            top: 5vh;
-        }
-        .find{
-            height: 30vh;
-        }
+            .nav-links.active {
+                display: flex;
+            }
 
+            .nav-links p {
+                color: black;
+                font-size: 3.5vw;
+                padding: 2vh 0;
+                margin: 0;
+                border-bottom: 1px solid #ddd;
+            }
+
+            /* Hamburger Icon */
+            .hamburger {
+                display: block;
+                position: absolute;
+                right: 5vw;
+                top: 2vh;
+                font-size: 6vw;
+                color: white;
+                cursor: pointer;
+                z-index: 10;
+            }
+
+            /* When logo background turns white, hamburger turns black */
+            .logo.scrolled .hamburger,
+            .logo:hover .hamburger {
+                color: black;
+            }
+
+            /* Hide download + language text on small screens */
+            .down,
+            .logo>p:last-child {
+                display: none;
+            }
+
+
+            .down {
+                width: auto;
+                margin-top: 2vw;
+                margin-bottom: 2vw;
+            }
+
+            .photos {
+                width: 70vw;
+                height: 40vh;
+                top: 0;
+            }
+
+            .float2 {
+                top: 6vh;
+                right: 76vw;
+                width: 20vw;
+            }
+
+            .float3 {
+                top: 8vh;
+                left: 75vw;
+                width: 20vw;
+                height: 3vh;
+            }
+
+            .float4 {
+                top: 15vh;
+                right: 78vw;
+                width: 20vw;
+                z-index: 4;
+            }
+
+            .float5 {
+                top: 7vh;
+                left: 3vw;
+                width: 22vw;
+                z-index: 1;
+            }
+
+            .float6 {
+                top: 15vh;
+                right: 5vw;
+                width: 20vw;
+            }
+
+            .float7 {
+                top: 1vh;
+                right: 14vw;
+                width: 17vw;
+            }
+
+            .featured {
+                height: 80vw;
+            }
+
+            .orange {
+                height: 40vh;
+                position: relative;
+            }
+
+            .written p {
+                position: absolute;
+                top: 5vh;
+            }
+
+            .find {
+                height: 30vh;
+            }
+
+            .flying {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .flying p {
+                font-size: 120%;
+                line-height: normal;
+            }
+
+            .curved {
+                font-size: 200%;
+            }
+
+            .dukan {
+                width: 100%;
+                height: auto;
+                margin: 0;
+            }
+
+            .kaafee {
+                height: auto;
+                width: 25%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .kaafee img {
+                width: 100%;
+            }
+
+            .kaafee p {
+                font-size: 70% !important;
+                height: 2vh;
+            }
+
+            .item p {
+                font-size: 80%;
+            }
+
+            .one p {
+                font-size: 90% !important;
+            }
+
+            .one img {
+                width: 13vw !important;
+                left: 2vw !important;
+            }
+
+            .right .select-box {
+                width: 100%;
+            }
+
+            .two img {
+                width: 13vw !important;
+                right: 2vw !important;
+            }
+
+            .instagram-block {
+                width: 100vw;
+                margin-top: 2vh auto;
+                padding-left: 1vw;
+            }
+
+            .news {
+
+                width: 100vw;
+                padding-left: 1vw;
+                margin-top: 3vh auto;
+                margin-right: 1vw;
+            }
+
+            .head {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 3vw;
+                margin-top: 1vw;
+            }
+
+            .date {
+                display: flex;
+                justify-content: space-between;
+                margin-top: .6vw;
+                margin-bottom: 1vw;
+                margin-left: .5vw;
+
+            }
+
+            .insta {
+                display: block;
+            }
+
+            .news img {
+                width: 100% !important;
+            }
+            .news p{
+                font-size: 100% !important;
+            }
+            .insta-header p{
+font-size: 100% !important;
+            }
+               .insta-header h2{
+font-size: 100% !important;
+            }
+               .insta-header a{
+font-size: 100% !important;
+margin-right: 5%;
+            }
         }
-        
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -666,18 +864,23 @@
     <div class="bg">
         <div class="logo">
             <img src="https://res.cloudinary.com/duxr6irjz/image/upload/v1761547225/generated-image_cxgwv8.png" alt="">
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+
             <div class="nav-links">
                 <p>HOME</p>
                 <p>"HOME" COLLECTION</p>
                 <p>"HOME" STORY</p>
                 <p>NEWS</p>
                 <p>STORY</p>
-                <a href="contact.html" style="text-decoration: none;"><p>CONTACT</p></a>
+                <a href="contact.html" style="text-decoration: none;">
+                    <p>CONTACT</p>
+                </a>
             </div>
             <a href="download.html" style="text-decoration: none;">
-            <div class="down">
-                <p>APP DOWNLOAD</p>
-            </div></a>
+                <div class="down">
+                    <p>APP DOWNLOAD</p>
+                </div>
+            </a>
             <P><span style="color: orange; margin-right: 1vw;">VI</span> EN</P>
         </div>
     </div>
