@@ -1,0 +1,621 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.vid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.nav {
+    display: flex;
+    gap: 20%;
+    position: absolute;
+    top: 2vh;
+    color: white;
+    width: 100%;
+    margin-left: 3vw;
+
+
+}
+
+.centre {
+    display: flex;
+    gap: 15%;
+    width: 40%;
+    position: relative;
+}
+
+.centre img {
+    filter: brightness(1) invert();
+    width: 2vw;
+}
+
+.centre p {
+    margin-top: 2.3vh;
+    font-family: "Trade Gothic", "Trade Gothic Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.right {
+    display: flex;
+    filter: brightness(1) invert();
+    width: 40%;
+    gap: 10%;
+    padding-left: 15%;
+}
+
+.right img {
+    width: 2vw;
+}
+
+.left img {
+    width: 7vw;
+}
+
+.left {
+    width: 20%;
+}
+
+.invid {
+    height: 100vh;
+    margin-top: 70vh;
+    color: white;
+    position: relative;
+}
+
+.invid img {
+    width: 40vw;
+
+}
+
+.invid p {
+    font-size: 6vw;
+    font-weight: bold;
+    margin-left: 10vw;
+    margin-bottom: 25vh;
+}
+
+.invid hr {
+    width: 9px;
+    height: 70vh;
+    background-color: white;
+    border: none;
+    transform-origin: left top;
+    margin-left: 10vw;
+    margin-top: 20vh;
+    position: absolute;
+}
+
+.pp {
+    font-size: 150% !important;
+    position: absolute;
+    top: 50vw;
+}
+
+.ppp {
+    font-size: 180% !important;
+    position: absolute;
+    top: 70vw;
+    right: 5vw;
+}
+
+#hh {
+    width: 9px;
+    height: 10vh;
+    background-color: white;
+    border: none;
+    transform-origin: left top;
+    margin-left: 10vw;
+    margin-top: 20vh;
+    position: absolute;
+    top: 59vw;
+    right: 3vw;
+}
+
+.main {
+    height: 570vh;
+    width: 100%;
+    background-color: white;
+    margin-top: 45vh;
+}
+
+.cycle {
+    display: flex;
+    overflow-x: hidden;
+    padding-left: 15vw;
+    position: relative;
+}
+
+.cycle img {
+    width: 65vw;
+    margin-right: 5vw;
+    transition: transform 0.3s ease;
+    transform: translateX(-70vw);
+    margin-top: 10vh;
+
+}
+
+.cycle:hover img {
+    animation: slideSequence 15s linear forwards infinite;
+}
+
+@keyframes slideSequence {
+
+    0% {
+        transform: translateX(70);
+    }
+
+    10% {
+        transform: translateX(-140vw);
+    }
+
+    25% {
+        transform: translateX(-140vw);
+    }
+
+    35% {
+        transform: translateX(-210vw);
+    }
+
+    45% {
+        transform: translateX(-210vw);
+    }
+
+    55% {
+        transform: translateX(-280vw);
+    }
+
+    65% {
+        transform: translateX(-280vw);
+    }
+
+    80% {
+        transform: translateX(-350vw);
+    }
+
+    90% {
+        transform: translateX(-350vw);
+    }
+
+    100% {
+        transform: translateX(-420vw);
+    }
+}
+
+.feel {
+    font-size: 200%;
+    text-align: center;
+    font-weight: 500;
+    margin: 5vh;
+}
+
+.mainimo {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+}
+
+.imo {
+    background-color: aqua;
+    width: 30%;
+    height: 60vh;
+    margin: 2vw;
+    background-size: cover;
+    position: relative;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+#imo1 {
+    background-image: url("https://yeticycles-prod.zaneray.com/cms/images/Z_2SQOvxEdbNPCYX_A9D00861copy.jpg?auto=format%2Ccompress&rect=1046%2C0%2C1466%2C1920&w=860&h=1126");
+}
+
+#imo2 {
+    background-image: url("https://yeticycles-prod.zaneray.com/cms/images/Z-v2CndAxsiBwLuu_CustomRubberMobile.jpg?auto=format%2Ccompress&rect=0%2C380%2C840%2C1100&w=860&h=1126");
+}
+
+#imo3 {
+    background-image: url("https://yeticycles-prod.zaneray.com/cms/images/Z_1zAuvxEdbNPCJK_A1D06667-Enhanced-NR-Editcopy.jpg?auto=format%2Ccompress&rect=1103%2C0%2C1466%2C1920&w=860&h=1126");
+}
+
+.imo p {
+    margin: 2vw;
+    color: white;
+    font-weight: 500;
+}
+
+.imo a {
+    position: absolute;
+    left: 2vw;
+    bottom: 3vh;
+    color: white;
+}
+
+.re {
+    font-weight: 700 !important;
+    font-size: 90%;
+    position: absolute;
+    top: 0% ;
+}
+
+.ws {
+    font-weight: 700 !important;
+    font-size: 190%;
+    position: absolute;
+    top: 60%;
+}
+
+.ww {
+    font-weight: 700 !important;
+    font-size: 60%;
+    position: absolute;
+    top: 110%;
+    left: 0% !important;
+}
+
+.imo:hover {
+    transform: scale(1.08);
+}
+
+.yeti {
+    font-size: 300%;
+    font-weight: 650;
+    margin-left: 10%;
+    padding-top: 1%;
+}
+
+.circle {
+    width: 15%;
+    position: absolute;
+    left: 5%;
+    top: 0;
+}
+
+.yti {
+    position: relative;
+}
+
+.maxxi {
+    width: 100%;
+    height: 300vh;
+    position: relative;
+}
+
+.bg {
+    margin: 10%;
+    background-color: rgb(226, 226, 226);
+    height: 250vh;
+    z-index: -5;
+}
+
+.one {
+    width: 80%;
+    position: absolute;
+    top: 0vw;
+    z-index: 1;
+    right: 0;
+        transition: transform 0.5s ease;
+
+}
+
+.two {
+    width: 80%;
+    position: absolute;
+    top: 100vh;
+    z-index: 1;
+        transition: transform 0.5s ease;
+
+}
+
+.three {
+    width: 80%;
+    position: absolute;
+    top: 200vh;
+    z-index: 1;
+    right: 0;
+    transition: transform 0.5s ease;
+
+}
+
+.fst1 {
+    position: absolute !important;
+    top: 45vh !important;
+    left: 25vw;
+    width: 100vw;
+    color: white;
+    z-index: 5;
+    /* height: 150vh !important; */
+}
+
+.fst1 p {
+    margin-left: 1vw !important;
+    font-size: 300%;
+}
+
+.fst a {
+    color: white;
+    font-size: 40%;
+    margin-top: 2%;
+}
+
+.re {
+    font-size: 160% !important;
+}
+
+.fst2 {
+    position: absolute !important;
+    top: 145vh !important;
+    left: 5vw;
+    width: 100vw;
+    color: white;
+    z-index: 5;
+}
+
+.fst2 p {
+    margin-left: 1vw !important;
+    font-size: 300%;
+}
+
+.maxxi a {
+    color: white;
+    font-size: 40%;
+    margin-top: 2%;
+}
+
+.fst3 {
+    position: absolute !important;
+    top: 245vh !important;
+    left: 25vw;
+    width: 100vw;
+    color: white;
+    z-index: 5;
+}
+
+.fst3 p {
+    margin-left: 1vw !important;
+    font-size: 300%;
+}
+
+.thr {
+    overflow: hidden;
+    width: 80%;
+    height: 60%;
+}
+
+.three:hover {
+    transform: scale(1.05);
+}
+.two:hover{
+    transform: scale(1.05);
+}
+.one:hover{
+    transform: scale(1.05);
+}
+#str{
+    font-size: 180%;
+    font-weight: 500;
+    margin-left: 10vw;
+}
+#ul{
+    width: 10vw;
+    margin-left: 9vw;
+}
+.str{
+    display: flex;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    gap: 5vw;
+    margin-left: 5vw;
+    margin-top: 2vh;
+}
+.se img{
+    width: 100%;
+}
+.se{
+    width: 36vw !important;
+    height: 55vh;
+        overflow-x: hidden;
+
+}
+.sev{
+    font-size: 120%;
+    font-weight: 700;
+    text-align: center;
+    flex-shrink: 0;
+}
+.we{
+    text-align: center;
+    font-size: 80%;
+    margin-top: 4vh;
+    font-weight: 400;
+    
+}
+.se img{
+     transition: transform 0.5s ease;
+     margin-bottom: 2vh;
+}
+.se img:hover{
+ 
+      transform: scale(1.07);
+}
+.yeti-footer {
+    background: #131313;
+    color: #bcbcbc;
+    padding: 6vw 8vw;
+    font-size: 0.9rem;
+    margin-top: 10vh;
+}
+
+.yeti-footer a {
+    color: #bcbcbc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.yeti-footer a:hover {
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    gap: 6vw;
+    margin-bottom: 6vh;
+}
+
+.footer-links ul {
+    list-style: none;
+    line-height: 2rem;
+}
+
+.footer-links li {
+    font-size: 0.95rem;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 5vw;
+    margin-bottom: 8vh;
+}
+
+.lang {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-size: 0.9rem;
+}
+
+.newsletter p {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #8ebcc7;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-line {
+    width: 12vw;
+    height: 1px;
+    background: white;
+    opacity: 0.4;
+}
+
+.social {
+    display: flex;
+    gap: 1.5vw;
+    font-size: 1.3rem;
+}
+
+.icon {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.icon:hover {
+    opacity: 0.6;
+}
+
+.footer-bottom {
+    margin-top: 6vh;
+    border-top: 1px solid #3a3a3a;
+    padding-top: 2vh;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-links a {
+    margin-left: 2vw;
+    font-size: 0.75rem;
+}
+@media (max-width: 600px) {
+.left img{
+    width: 25vw;
+}
+.centre{
+    display: none;
+}
+.right{
+    height: auto;
+}
+.right img{
+    width: 7vw;
+}
+.invid hr{
+    height: 20vh;
+    width: 5px; 
+
+}
+.invid img{
+    width: 80%;
+}
+.invid u{
+    margin-left: 8vw;
+    margin-bottom: 5vh;
+}
+.ppp{
+    font-size: 140% !important;
+}
+#hh{
+    display: none;
+}
+.mainimo{
+    display: block;
+    height: 200vh;
+}
+.imo{
+    width: 100%;
+}
+.main{
+    height: 550vh;
+}
+.ws{
+    display: none;
+}
+.maxxi{
+    height: 110vh;
+}
+.bg{
+    height: 100vh;
+}
+.fst1{
+    top: 0vh !important;
+}
+.fst2{
+    top: 30vh !important;
+}
+.fst3{
+    top: 70vh !important;
+}
+.two{
+    top: 30vh;
+}
+.three{
+    top: 60vh;
+}
+.str{
+    display: block;
+}
+.se{
+    width: 100%  !important;
+    height: 55vh;
+}
+#ul{
+    width: 40%;
+}
+}

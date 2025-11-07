@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20%;
+            position: absolute;
+            top: 2vh;
+            color: white;
+            width: 100%;
+            margin-left: 3vw;
+            border-bottom: 1px black solid;
+
+        }
+
+        .centre {
+            display: flex;
+            gap: 15%;
+            width: 40%;
+            position: relative;
+        }
+
+        .centre img {
+            filter: brightness(1) invert();
+            width: 2vw;
+        }
+
+        .centre p {
+            margin-top: 2.3vh;
+            font-family: "Trade Gothic", "Trade Gothic Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .right {
+            display: flex;
+            filter: brightness(1) invert();
+            width: 40%;
+            gap: 10%;
+            padding-left: 15%;
+        }
+
+        .right img {
+            width: 2vw;
+        }
+
+        .left img {
+            width: 7vw;
+        }
+
+        .left {
+            width: 20%;
+        }
+
+        .bg {
+            background-image: url("https://yeticycles-prod.zaneray.com/cms/images/d2e63af8-2bba-428b-835d-adf7409c47a2_DTrumpore_201909_EWS_8_Zermatt_LoRes_114-desktop%402x.jpg?auto=compress,format&rect=0,0,2880,1620&w=2880&h=1620");
+            width: 100%;
+            height: 50vh;
+            background-size: 100% 110%;
+
+
+        }
+
+        .bg p {
+            font-size: 400%;
+            color: white;
+            font-weight: 700;
+            position: absolute;
+            top: 14vh;
+            left: 38vw;
+        }
+        .login{
+            text-align: center;
+        }
+        .dibb{
+            background-color: rgb(208, 208, 208);
+            width: 25%;
+            font-size: 80%;
+            margin-left: 37%;
+            padding: .2vw;
+        }
+        .ema{
+            color: grey;
+            font-size: 80%;
+            text-align: left;
+            margin-left: 37%;
+        }
+        .login input{
+            width: 24.5%;
+            padding: .7vw;
+        }
+        .for{
+            font-size: 80%;
+            margin-left: 18vw;
+        }
+        .log{
+            background-color: black;
+            width: 26%;
+            margin-left: 37%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                        margin-bottom: 1vw;
+
+        }
+        .login a{
+            font-size: 90%;
+            color: rgb(51, 51, 51);
+            font-weight: 700;
+        }
+             .footer-links {
+    display: flex;
+    gap: 6vw;
+    margin-bottom: 6vh;
+}
+
+.footer-links ul {
+    list-style: none;
+    line-height: 2rem;
+}
+
+.footer-links li {
+    font-size: 0.95rem;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 5vw;
+    margin-bottom: 8vh;
+}
+
+.lang {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-size: 0.9rem;
+}
+
+.newsletter p {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #8ebcc7;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-line {
+    width: 12vw;
+    height: 1px;
+    background: white;
+    opacity: 0.4;
+}
+
+.social {
+    display: flex;
+    gap: 1.5vw;
+    font-size: 1.3rem;
+}
+
+.icon {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.icon:hover {
+    opacity: 0.6;
+}
+        .yeti-footer {
+    background: #131313;
+    color: #bcbcbc;
+    padding: 6vw 8vw;
+    font-size: 0.9rem;
+    margin-top: 20vh;
+}
+
+.yeti-footer a {
+    color: #bcbcbc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.yeti-footer a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 6vh;
+    border-top: 1px solid #3a3a3a;
+    padding-top: 2vh;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-links a {
+    margin-left: 2vw;
+    font-size: 0.75rem;
+}
+@media (max-width: 600px) {
+.left img{
+    width: 25vw;
+}
+.centre{
+    display: none;
+}
+.right{
+    height: auto;
+}
+.right img{
+    width: 7vw;
+}
+.cart input{
+    padding: 3vh;
+}
+.bg{
+    height: 30vh;
+   
+}
+ .bg p {
+            font-size: 300%;
+            color: white;
+            font-weight: 700;
+            position: absolute;
+            top: 14vh;
+            left: 25vw;
+        }
+.dibb{
+    margin-left: 15%;
+        margin-right: 15%;
+
+    width: 70%;
+}
+.ema{
+    margin-left: 15%;
+            margin-right: 15%;
+
+}
+.login input{
+    width: 69%;
+}
+.for{
+    margin-left: 0vw;
+}
+.log{
+    margin-bottom: 5vh;
+}
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="left"><a href="index.html"><img
+                src="https://res.cloudinary.com/duxr6irjz/image/upload/v1762403431/ChatGPT_Image_Nov_6_2025_09_59_40_AM_s8jsvu.png"
+                alt=""></a>
+        </div>
+        <div class="centre">
+            <p>BIKES</p>
+            <p>APPAREL</p>
+            <p>GEAR</p>
+            <p>ROOTS</p>
+            <p>DEMO</p>
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJtMjEgMjFsLTQuMzQzLTQuMzQzbTAgMEE4IDggMCAxIDAgNS4zNDMgNS4zNDNhOCA4IDAgMCAwIDExLjMxNCAxMS4zMTQiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg=="
+                alt="">
+        </div>
+        <div class="right">
+              <a href=""> <img
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiPjxwYXRoIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik05LjAwOCA4Ljg0YTMuMTg1IDMuMTg1IDAgMCAxIDMuNDcxLTEuODA2YTMuMDkgMy4wOSAwIDAgMSAyLjI2NSAxLjYxNGEyLjY4MiAyLjY4MiAwIDAgMS0xLjU2MiAzLjY4OWExLjk4IDEuOTggMCAwIDAtMS4yNzYgMS43ODd2LjczOCIvPjxwYXRoIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTExLjg4MSAxNy40MjRoLjAwOCIvPjxwYXRoIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMTIgMjEuNWE5LjUgOS41IDAgMSAwIDAtMTlhOS41IDkuNSAwIDAgMCAwIDE5Ii8+PC9nPjwvc3ZnPg=="
+                    alt=""></a>
+            <a href="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJjdXJyZW50Q29sb3IiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNNy4yNSAxMGE0Ljc1IDQuNzUgMCAxIDEgOS41IDBhNC43NSA0Ljc1IDAgMCAxLTkuNSAwTTEyIDYuNzVhMy4yNSAzLjI1IDAgMSAwIDAgNi41YTMuMjUgMy4yNSAwIDAgMCAwLTYuNSIvPjxwYXRoIGQ9Ik0zLjUyNCA4Ljg1N2E4LjI5IDguMjkgMCAwIDEgOC4yNi03LjYwN2guNDMyYTguMjkgOC4yOSAwIDAgMSA4LjI2IDcuNjA3YTguOTQgOC45NCAwIDAgMS0xLjk5IDYuMzk2bC00Ljc5MyA1Ljg2MWEyLjE4NyAyLjE4NyAwIDAgMS0zLjM4NiAwbC00Ljc5My01Ljg2MWE4Ljk0IDguOTQgMCAwIDEtMS45OS02LjM5Nm04LjI2LTYuMTA3QTYuNzkgNi43OSAwIDAgMCA1LjAyIDguOThhNy40NCA3LjQ0IDAgMCAwIDEuNjU2IDUuMzIzbDQuNzkzIDUuODYyYS42ODcuNjg3IDAgMCAwIDEuMDY0IDBsNC43OTMtNS44NjJBNy40NCA3LjQ0IDAgMCAwIDE4Ljk4IDguOThhNi43OSA2Ljc5IDAgMCAwLTYuNzY1LTYuMjN6Ii8+PC9nPjwvc3ZnPg=="
+                    alt=""></a>
+            <a href="login.html"> <img
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIj48cGF0aCBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0yMSAxMmE4Ljk2IDguOTYgMCAwIDEtMS41MjYgNS4wMTZBOC45OSA4Ljk5IDAgMCAxIDEyIDIxYTguOTkgOC45OSAwIDAgMS03LjQ3NC0zLjk4NEE5IDkgMCAxIDEgMjEgMTJaIi8+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMTMuMjUgOWMwIC42OS0uNTYgMS4yNS0xLjI1IDEuMjV2MS41QTIuNzUgMi43NSAwIDAgMCAxNC43NSA5ek0xMiAxMC4yNWMtLjY5IDAtMS4yNS0uNTYtMS4yNS0xLjI1aC0xLjVBMi43NSAyLjc1IDAgMCAwIDEyIDExLjc1ek0xMC43NSA5YzAtLjY5LjU2LTEuMjUgMS4yNS0xLjI1di0xLjVBMi43NSAyLjc1IDAgMCAwIDkuMjUgOXpNMTIgNy43NWMuNjkgMCAxLjI1LjU2IDEuMjUgMS4yNWgxLjVBMi43NSAyLjc1IDAgMCAwIDEyIDYuMjV6TTUuMTY2IDE3Ljg1NmwtLjcxOS0uMjE0bC0uMTE3LjM5MmwuMjY3LjMxem0xMy42NjggMGwuNTcuNDg5bC4yNjYtLjMxbC0uMTE3LS4zOTN6TTkgMTUuNzVoNnYtMS41SDl6bTAtMS41YTQuNzUgNC43NSAwIDAgMC00LjU1MyAzLjM5MmwxLjQzOC40MjhBMy4yNSAzLjI1IDAgMCAxIDkgMTUuNzV6bTMgNmE4LjIzIDguMjMgMCAwIDEtNi4yNjUtMi44ODJsLTEuMTM4Ljk3N0E5LjczIDkuNzMgMCAwIDAgMTIgMjEuNzV6bTMtNC41YzEuNDcgMCAyLjcxNS45NzggMy4xMTUgMi4zMmwxLjQzOC0uNDI4QTQuNzUgNC43NSAwIDAgMCAxNSAxNC4yNXptMy4yNjUgMS42MThBOC4yMyA4LjIzIDAgMCAxIDEyIDIwLjI1djEuNWE5LjczIDkuNzMgMCAwIDAgNy40MDMtMy40MDV6Ii8+PC9nPjwvc3ZnPg=="
+                    alt=""></a>
+
+            <a href="cart.html"> <img
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xNiAxOGEyIDIgMCAwIDEgMiAyYTIgMiAwIDAgMS0yIDJhMiAyIDAgMCAxLTItMmEyIDIgMCAwIDEgMi0ybTAgMWExIDEgMCAwIDAtMSAxYTEgMSAwIDAgMCAxIDFhMSAxIDAgMCAwIDEtMWExIDEgMCAwIDAtMS0xbS05LTFhMiAyIDAgMCAxIDIgMmEyIDIgMCAwIDEtMiAyYTIgMiAwIDAgMS0yLTJhMiAyIDAgMCAxIDItMm0wIDFhMSAxIDAgMCAwLTEgMWExIDEgMCAwIDAgMSAxYTEgMSAwIDAgMCAxLTFhMSAxIDAgMCAwLTEtMU0xOCA2SDQuMjdsMi41NSA2SDE1Yy4zMyAwIC42Mi0uMTYuOC0uNGwzLTRjLjEzLS4xNy4yLS4zOC4yLS42YTEgMSAwIDAgMC0xLTFtLTMgN0g2Ljg3bC0uNzcgMS41Nkw2IDE1YTEgMSAwIDAgMCAxIDFoMTF2MUg3YTIgMiAwIDAgMS0yLTJhMiAyIDAgMCAxIC4yNS0uOTdsLjcyLTEuNDdMMi4zNCA0SDFWM2gybC44NSAySDE4YTIgMiAwIDAgMSAyIDJjMCAuNS0uMTcuOTItLjQ1IDEuMjZsLTIuOTEgMy44OWMtLjM2LjUxLS45Ni44NS0xLjY0Ljg1Ii8+PC9zdmc+"
+                    alt=""> </a>
+        </div>
+    </div>
+    <div class="bg">
+        <p>ACCOUNT</p>
+    </div>
+    <div class="login">
+        <p>LOGIN</p>
+        <div class="dibb">
+            <p>We’ve updated our website. If this your first time logging in, reset your password using the Forgot Password link below.</p>
+        </div>
+        <p class="ema">EMAIL</p>
+        <input type="email" name="" id="">
+        <p class="ema">PASSWORD</p>
+        <input type="password" name="" id="">
+        <p class="for">FORGET PASSWORD</p>
+        <div class="log">
+            <p>LOGIN</p>
+           
+        </div>
+         <a href="">CREATE A NEW ACCOUNT</a>
+    </div>
+     <footer class="yeti-footer">
+
+    <div class="footer-links">
+        <ul>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Special Projects</a></li>
+            <li><a href="#">Bike Setup</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Compare</a></li>
+            <li><a href="#">Demo</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="#">Suspension Setup</a></li>
+            <li><a href="#">Manuals</a></li>
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Pro Program</a></li>
+            <li><a href="#">Bike Registration</a></li>
+            <li><a href="#">Patents</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Dealer Locator</a></li>
+            <li><a href="#">Shipping / Returns</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Bike History</a></li>
+            <li><a href="#">Bike Archive</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-right">
+
+        <div class="lang">
+            <img src="https://flagcdn.com/w20/us.png">
+            <span>English</span>
+        </div>
+
+        <div class="newsletter">
+            <p>NEWSLETTER SIGN UP</p>
+            <div class="newsletter-line"></div>
+        </div>
+
+        <div class="social">
+            <i class="icon ig">📷</i>
+            <i class="icon fb">📘</i>
+            <i class="icon yt">▶️</i>
+            <i class="icon vv">🎬</i>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© Yeti Cycles 2025 All Rights Reserved.</p>
+
+        <div class="bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Accessibility</a>
+        </div>
+    </div>
+
+</footer>
+</body>
+
+</html>
