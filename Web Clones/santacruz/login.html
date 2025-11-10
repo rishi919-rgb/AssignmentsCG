@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa Cruz Login Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px 50px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      width: 420px;
+      text-align: center;
+    }
+
+    .login-container img {
+      width: 70px;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .shop-btn {
+      background-color: #5c3ef2;
+      color: #fff;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .shop-btn:hover {
+      background-color: #4b2ed6;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 25px 0;
+      color: #999;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: #ddd;
+      margin: 0 10px;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .continue-btn {
+      width: 100%;
+      background-color: #f1f1f1;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #777;
+      cursor: not-allowed;
+    }
+
+    .continue-btn.active {
+      background-color: #5c3ef2;
+      color: white;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="https://www.santacruzbicycles.com/cdn/shop/files/header-logo.svg?v=1727298517&width=120" alt="Santa Cruz Logo">
+
+    <h2>Sign in</h2>
+    <p>Choose how you'd like to sign in</p>
+
+    <button class="shop-btn">Sign in with shop</button>
+
+    <div class="divider">or</div>
+
+    <input type="email" placeholder="Email" id="emailInput">
+    <button class="continue-btn" id="continueBtn">Continue</button>
+  </div>
+
+ 
+</body>
+</html>

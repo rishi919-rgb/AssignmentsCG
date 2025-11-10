@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find a Dealer | Santa Cruz Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #222;
+      overflow-x: hidden;
+    }
+    .top {
+    height: 7vh;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tl {
+    display: flex;
+    width: 30%;
+    color: white;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tr {
+    display: flex;
+    gap: 5%;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tr img {
+    width: 7vw;
+}
+
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 900;
+      margin: 6vh 0 4vh 0;
+      padding-top: 5vh;
+    }
+
+    .dealer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 3vh 5vw;
+      gap: 2vw;
+    }
+
+    .dealer-list {
+      width: 30%;
+      background-color: #fafafa;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      padding: 2vw;
+      height: 75vh;
+      overflow-y: auto;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 1rem;
+    }
+
+    .search-box button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: #e40000;
+    }
+
+    .list-header {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #e40000;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .dealer-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      transition: 0.3s;
+    }
+
+    .dealer-card:hover {
+      border-color: #e40000;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .dealer-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .dealer-card p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4rem;
+    }
+
+    .map-area {
+      width: 68%;
+      height: 75vh;
+      background: linear-gradient(135deg, #e0e0e0, #f7f7f7);
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .map-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.2rem;
+      color: #666;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .map-marker {
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      background-color: #e40000;
+      border-radius: 50%;
+      top: 45%;
+      left: 48%;
+      box-shadow: 0 0 10px rgba(228, 0, 0, 0.5);
+    }
+.nav {
+    display: flex;
+    gap: 32%;
+    width: 100%;
+    margin-left: 4%;
+    position: absolute;
+    top: 8vh;
+    font-weight: bold;
+    margin-bottom: 30vw;
+}
+
+.left {
+    display: flex;
+    gap: 15%;
+    margin-top: 2%;
+}
+
+.right {
+    gap: 10%;
+    width: 30%;
+    margin-top: 2%;
+
+}
+
+.right img {
+    margin-right: 10%;
+}
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 5vh 5vw;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5vw;
+}
+
+.newsletter {
+  flex: 1 1 40%;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 2vh;
+}
+
+.newsletter-text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 2vh;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.form-row {
+  display: flex;
+  gap: 1vw;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #e40000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #c20000;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  flex: 1 1 50%;
+  gap: 3vw;
+}
+
+.footer-links h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer-links p {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.footer-links p:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 6vh;
+  padding-top: 3vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+.brands img {
+  width: 70px;
+  margin-right: 20px;
+}
+
+.social i {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.social i:hover {
+  color: #e40000;
+}
+
+.language {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+  </style>
+</head>
+
+<body>
+       <div class="top">
+        <div class="tl">
+            <p>Dealer Locator</p>
+            <p>Owners Club</p>
+            <p>Demo Centres</p>
+        </div>
+        <div class="tr">
+            <img src="https://www.santacruzbicycles.com/cdn/shop/files/julianna-logo.svg?v=1742339664&width=93" alt="">
+            <img src="https://www.santacruzbicycles.com/cdn/shop/files/reserve-logo.svg?v=1727305152&width=91" alt="">
+        </div>
+    </div>
+ 
+    <div class="nav">
+        <div class="left">
+            <p>Bikes</p>
+            <p>Gear</p>
+            <p>About</p>
+            <p>Support</p>
+        </div>
+        <div class="centre">
+            <img src="https://www.santacruzbicycles.com/cdn/shop/files/header-logo.svg?v=1727298517&width=74" alt="">
+        </div>
+        <div class="right">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJtMjEgMjFsLTQuMzQzLTQuMzQzbTAgMEE4IDggMCAxIDAgNS4zNDMgNS4zNDNhOCA4IDAgMCAwIDExLjMxNCAxMS4zMTQiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg=="
+                alt="">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIj48cGF0aCBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0yMSAxMmE4Ljk2IDguOTYgMCAwIDEtMS41MjYgNS4wMTZBOC45OSA4Ljk5IDAgMCAxIDEyIDIxYTguOTkgOC45OSAwIDAgMS03LjQ3NC0zLjk4NEE5IDkgMCAxIDEgMjEgMTJaIi8+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMTMuMjUgOWMwIC42OS0uNTYgMS4yNS0xLjI1IDEuMjV2MS41QTIuNzUgMi43NSAwIDAgMCAxNC43NSA5ek0xMiAxMC4yNWMtLjY5IDAtMS4yNS0uNTYtMS4yNS0xLjI1aC0xLjVBMi43NSAyLjc1IDAgMCAwIDEyIDExLjc1ek0xMC43NSA5YzAtLjY5LjU2LTEuMjUgMS4yNS0xLjI1di0xLjVBMi43NSAyLjc1IDAgMCAwIDkuMjUgOXpNMTIgNy43NWMuNjkgMCAxLjI1LjU2IDEuMjUgMS4yNWgxLjVBMi43NSAyLjc1IDAgMCAwIDEyIDYuMjV6TTUuMTY2IDE3Ljg1NmwtLjcxOS0uMjE0bC0uMTE3LjM5MmwuMjY3LjMxem0xMy42NjggMGwuNTcuNDg5bC4yNjYtLjMxbC0uMTE3LS4zOTN6TTkgMTUuNzVoNnYtMS41SDl6bTAtMS41YTQuNzUgNC43NSAwIDAgMC00LjU1MyAzLjM5MmwxLjQzOC40MjhBMy4yNSAzLjI1IDAgMCAxIDkgMTUuNzV6bTMgNmE4LjIzIDguMjMgMCAwIDEtNi4yNjUtMi44ODJsLTEuMTM4Ljk3N0E5LjczIDkuNzMgMCAwIDAgMTIgMjEuNzV6bTMtNC41YzEuNDcgMCAyLjcxNS45NzggMy4xMTUgMi4zMmwxLjQzOC0uNDI4QTQuNzUgNC43NSAwIDAgMCAxNSAxNC4yNXptMy4yNjUgMS42MThBOC4yMyA4LjIzIDAgMCAxIDEyIDIwLjI1djEuNWE5LjczIDkuNzMgMCAwIDAgNy40MDMtMy40MDV6Ii8+PC9nPjwvc3ZnPg=="
+                alt="">
+           <a href="login.html"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xNiAxOGEyIDIgMCAwIDEgMiAyYTIgMiAwIDAgMS0yIDJhMiAyIDAgMCAxLTItMmEyIDIgMCAwIDEgMi0ybTAgMWExIDEgMCAwIDAtMSAxYTEgMSAwIDAgMCAxIDFhMSAxIDAgMCAwIDEtMWExIDEgMCAwIDAtMS0xbS05LTFhMiAyIDAgMCAxIDIgMmEyIDIgMCAwIDEtMiAyYTIgMiAwIDAgMS0yLTJhMiAyIDAgMCAxIDItMm0wIDFhMSAxIDAgMCAwLTEgMWExIDEgMCAwIDAgMSAxYTEgMSAwIDAgMCAxLTFhMSAxIDAgMCAwLTEtMU0xOCA2SDQuMjdsMi41NSA2SDE1Yy4zMyAwIC42Mi0uMTYuOC0uNGwzLTRjLjEzLS4xNy4yLS4zOC4yLS42YTEgMSAwIDAgMC0xLTFtLTMgN0g2Ljg3bC0uNzcgMS41Nkw2IDE1YTEgMSAwIDAgMCAxIDFoMTF2MUg3YTIgMiAwIDAgMS0yLTJhMiAyIDAgMCAxIC4yNS0uOTdsLjcyLTEuNDdMMi4zNCA0SDFWM2gybC44NSAySDE4YTIgMiAwIDAgMSAyIDJjMCAuNS0uMTcuOTItLjQ1IDEuMjZsLTIuOTEgMy44OWMtLjM2LjUxLS45Ni44NS0xLjY0Ljg1Ii8+PC9zdmc+"
+                alt=""></a> 
+        </div>
+    </div>
+  <h1>FIND A DEALER</h1>
+
+  <div class="dealer-container">
+    <div class="dealer-list">
+      <div class="search-box">
+        <input type="text" placeholder="Kalol, GJ IN" />
+        <button>🔍</button>
+      </div>
+
+      <p class="list-header">RETAILERS</p>
+
+      <div class="dealer-card">
+        <h3>Wolfi's Bike Shop</h3>
+        <p>Sheikh Zayed Road between Interch 2 & 3<br>Dubai, 72327</p>
+      </div>
+
+      <div class="dealer-card">
+        <h3>Velloccino UAB</h3>
+        <p>Žalgirio g. 122<br>Vilnius, 9300</p>
+      </div>
+
+      <div class="dealer-card">
+        <h3>Bike World Kalol</h3>
+        <p>Nr. Punit Park, Kalol, Gujarat<br>India 382721</p>
+      </div>
+
+      <div class="dealer-card">
+        <h3>Trail Master Bikes</h3>
+        <p>SG Highway, Ahmedabad, India</p>
+      </div>
+    </div>
+
+    <div class="map-area">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58891.71553911631!2d72.46095251701287!3d23.228151706896707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c25e6c08bf663%3A0xff94e46a22aeb386!2sKalol%2C%20Gujarat!5e1!3m2!1sen!2sin!4v1762781587401!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+   <footer class="footer">
+  <div class="footer-container">
+
+    <div class="newsletter">
+      <img src="https://www.santacruzbicycles.com/cdn/shop/files/header-logo.svg?v=1727298517&width=120" alt="Santa Cruz Logo" class="footer-logo">
+
+      <p class="newsletter-text">Sign up for our weekly e-newsletter, The Roll Up, and get the latest news, offers and more.</p>
+
+      <form class="newsletter-form">
+        <div class="form-row">
+          <input type="email" placeholder="Email*" required>
+          <input type="text" placeholder="First Name*" required>
+        </div>
+        <select>
+          <option>Country*</option>
+          <option>United States</option>
+          <option>India</option>
+          <option>United Kingdom</option>
+        </select>
+        <select>
+          <option>Preferred Language*</option>
+          <option>English</option>
+          <option>Spanish</option>
+        </select>
+
+        <label class="checkbox">
+          <input type="checkbox">
+          Yes! Send me emails with news from Santa Cruz Bicycles.
+        </label>
+
+        <button type="submit">Sign Me Up</button>
+      </form>
+    </div>
+
+    <div class="footer-links">
+      <div class="col">
+        <h4>All Bikes</h4>
+        <p>Bike Finder</p>
+        <p>Contact Rider Support</p>
+        <p>Owners Club</p>
+        <p>Dealer Locator</p>
+        <p>Factory Demo</p>
+      </div>
+
+      <div class="col">
+        <h4>Discover</h4>
+        <p>Who We Are</p>
+        <p>Technology</p>
+        <p>Teams</p>
+        <p>Careers</p>
+      </div>
+
+      <div class="col">
+        <h4>Support</h4>
+        <p>Rider Support</p>
+        <p>Warranty</p>
+        <p>Bike Archive</p>
+        <p>Product Recalls</p>
+        <p>Returns & FAQ</p>
+        <p>Suspension Calculator</p>
+        <p>Dropper Compatibility</p>
+        <p>Dealer Application</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="brands">
+      <img src="https://www.santacruzbicycles.com/cdn/shop/files/pay-dirt-logo.svg?v=1727298519&width=100" alt="">
+      <img src="https://www.santacruzbicycles.com/cdn/shop/files/julianna-logo.svg?v=1742339664&width=93" alt="">
+      <img src="https://www.santacruzbicycles.com/cdn/shop/files/reserve-logo.svg?v=1727305152&width=91" alt="">
+    </div>
+
+    <div class="social">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+      <i class="fa-brands fa-youtube"></i>
+    </div>
+
+    <p class="language">🇺🇸 US / English</p>
+  </div>
+</footer>
+</body>
+</html>
