@@ -182,3 +182,19 @@ h1 {
         height: 120px;
     }
 }
+.waka{
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+    height: 5vh;
+    width: 100%;
+    color: rgb(255, 36, 72);
+}
+.hits{
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+    height: 3vh;
+    width: 100%;
+    color: rgb(255, 36, 72);
+}

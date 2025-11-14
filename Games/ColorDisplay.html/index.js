@@ -12,7 +12,8 @@ const dil1 = document.querySelector('.buti');
 const dil2 = document.querySelector('.buti1');
 const dil3 = document.querySelector('.buti2');
 const name = document.querySelector('.name');
-
+const bst = document.querySelector('.bst');
+const waka = document.querySelector('.waka')
 var currentStreak = 0; //user track
 var bestStreak = 0; //data store
 var pickCorrectColor = 0; //random color
@@ -78,6 +79,7 @@ function setGame() {
     pickCorrectColor = pickGenerator();
     console.log(color);
     console.log(pickCorrectColor);
+
     colorDisplay.textContent = pickCorrectColor
     for (var i = 0; i < color.length; i++) {
         colorBoxes[i].style.backgroundColor = color[i];
@@ -89,13 +91,38 @@ webLoad();
 function winGuess(event) {
     var tempBox = event.target;
     if (pickCorrectColor === tempBox.style.backgroundColor) {
-        messageDisplay.textContent = "You Won";
+        //task 2,4 (3already implemented when pressed hard then easy styles to hard , hard styles to easy)
+        //2. "Streak!" Message When Streak ≥ 3
+        //4. Show "First Win!" on First Correct Answer
+        if (currentStreak === 0) {
+            messageDisplay.textContent = "First Winnn!"
+        }
+        else if (currentStreak >= 2) {
+            messageDisplay.textContent = "STREAKKKK!!!"
+        } else {
+            messageDisplay.textContent = "You Won";
+        }
+        setTimeout(function () {
+            tempBox.style.border = "0px";
+        }, 1500);
+
+        tempBox.style.border = "5px solid gold"
+
+
         colorBoxes.forEach(box => {
             box.style.pointerEvents = "auto";
             box.style.opacity = "1";
         });
         setGame();
         currentStreak++;
+
+        //task5
+        //5. Header Text Becomes Bold on New Best Streak
+        if (currentStreak > bestStreak) {
+            bst.innerHTML = "<h2>Best Streakkk</h2>"
+        } else {
+            bst.innerHTML = "<h3>Best Streakkk</h3>"
+        }
         bestStreak = Math.max(bestStreak, currentStreak);
         localStorage.setItem('highBestStreak', bestStreak);
         if (count === 1) {
@@ -114,7 +141,12 @@ function winGuess(event) {
         messageDisplay.textContent = "Try Again";
         tempBox.style.pointerEvents = "none";
         tempBox.style.opacity = "0.4";
+        //task6
+        tempBox.classList.add('shake');
+        setTimeout(function () {
+            tempBox.classList.remove('shake');
 
+        },1000)
         ++count;
         dil();
 

@@ -16,11 +16,12 @@ body {
     color: white;
     position: relative;
 }
-.name{
+
+.name {
     width: 15vw;
     height: 5vh;
     position: absolute;
-    right: 6vw ;
+    right: 6vw;
     top: 4vh;
     font-size: 2vw;
     text-align: center;
@@ -145,7 +146,7 @@ header h1 {
     background: white;
     color: #232526;
     border-color: white;
-    
+
 }
 
 /* Color Box Grid */
@@ -184,23 +185,25 @@ header h1 {
     margin-left: 1vw;
     font-size: 300%;
 }
-.buti1{
-     position: absolute;
+
+.buti1 {
+    position: absolute;
     width: 7%;
     height: 7vh;
     top: 8vh;
     right: 10vw;
     margin-left: 1vw;
-     font-size: 300%;
+    font-size: 300%;
 }
-.buti2{
-     position: absolute;
+
+.buti2 {
+    position: absolute;
     width: 7%;
     height: 7vh;
     top: 8vh;
     right: 15vw;
     margin-left: 1vw;
-     font-size: 300%;
+    font-size: 300%;
 }
 
 
@@ -251,4 +254,42 @@ header h1 {
     .color-box-container {
         grid-template-columns: 1fr;
     }
+}
+
+@keyframes shaky {
+    0% {
+        transform: translateX(-10px);
+    }
+
+    10% {
+        transform: translateX(10px);
+    }
+
+    20% {
+        transform: translateX(-10px);
+    }
+
+    30% {
+        transform: translateX(10px);
+    }
+
+    40% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    70% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+.shake {
+    animation: shaky 1s ;
 }

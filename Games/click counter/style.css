@@ -94,6 +94,7 @@ h1 {
     flex-direction: column;
     gap: 15px;
     margin-bottom: 20px;
+    /* align-items: center; */
 }
 
 /* Click Button */
@@ -108,6 +109,11 @@ h1 {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+    width: 55%;
+   margin-left: 23%;
+   margin-top: 5vh;
+   margin-bottom: 5vh;
+    
 }
 
 .click-btn:hover:not(:disabled) {
