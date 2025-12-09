@@ -37,3 +37,25 @@ function dataLoad(data) {
 }
 
 search.addEventListener('click', api);
+
+
+
+loc.addEventListener('click', () => {
+    city.textContent = "Detecting your location...";
+    
+    navigator.geolocation.getCurrentPosition(success, error);
+});
+function success(position) {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+
+    // Fetch weather using lat & lon
+    fetch(`https://api.weatherapi.com/v1/current.json?key=7738c00bb98d49b79cc51344250912&q=${lat},${lon}&aqi=no`)
+        .then(res => res.json())
+        .then(dataLoad)
+        .catch(() => city.textContent = "Error fetching location weather!");
+}
+
+function error() {
+    city.textContent = "Location access denied ❌";
+}

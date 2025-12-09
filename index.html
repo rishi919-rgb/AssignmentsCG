@@ -6,74 +6,116 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <style>
-      /* Basic Page Styling */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 30px;
-    background: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
 }
 
-/* Table Styling */
+/* Table Container */
 table {
-    width: 80%;
-    margin-bottom: 40px;
-    border-collapse: collapse;
-    background: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden;
+  width: 85%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.3);
+  animation: fadeIn 0.4s ease-in-out;
 }
 
-/* Table Header */
-table th {
-    background: #222;
-    color: white;
-    padding: 14px 12px;
-    text-align: left;
-    font-size: 18px;
+/* Table Head Cells */
+th {
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 14px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 1px;
 }
 
-/* Table Data Cells */
-table td {
-    padding: 12px 14px;
-    font-size: 16px;
-    border-bottom: 1px solid #ddd;
+/* Table Cells */
+td {
+  padding: 14px;
+  font-size: 16px;
+  text-align: center;
+  color: #f2f2f2;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Last row bottom border removal */
-table tr:last-child td {
-    border-bottom: none;
+/* Remove last border */
+tr:last-child td {
+  border-bottom: none;
 }
 
-/* Hover effect on rows */
-table tr:hover {
-    background-color: #f0f8ff;
+/* Hover Highlight */
+tr:hover {
+  background: rgba(255,255,255,0.12);
+  transition: 0.3s;
 }
 
 /* Link Styling */
-table a {
-    text-decoration: none;
-    color: #0077ff;
-    font-weight: 600;
+a {
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #00c6ff;
+  color: #000;
+  font-weight: 600;
+  transition: 0.25s;
 }
 
-table a:hover {
-    text-decoration: underline;
+a:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.08);
 }
 
-/* Responsiveness */
-@media (max-width: 700px) {
-    table {
-        width: 95%;
-        font-size: 14px;
-    }
-    table th, table td {
-        padding: 10px;
-    }
+/* Glow Hover Animation */
+table:hover {
+  box-shadow: 0 0 30px rgba(255,255,255,0.3);
+}
+
+/* Table Title Row Styling */
+td:first-child {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media(max-width: 800px) {
+  table {
+    width: 98%;
+  }
+  th, td {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
    </style>
