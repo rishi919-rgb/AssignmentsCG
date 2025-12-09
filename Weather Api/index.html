@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="search-container">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="searchBtn">Search</button>
+        <button id="locBtn">📍 My Location</button>
+    </div>
+
+    <p class="one">Weather Today</p>
+    <p class="one1"></p>
+
+    <div class="parent">
+        <div class="left">
+            <img id="weatherIcon" src="" alt="Weather Icon">
+            <p class="temp"></p>
+            <p class="text"></p>
+            <p class="time"></p>
+        </div>
+
+        <div class="details">
+            <p class="high"></p>
+            <p class="low"></p>
+            <p class="humi"></p>
+            <p class="preci"></p>
+            <p class="wind"></p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
