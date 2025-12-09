@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+  background-size: 400% 400%;
+  animation: bgShift 9s infinite ease-in-out;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+/* Title */
+.content h1 {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.name {
+  color: #d1e4ff;
+}
+
+/* Subtitle */
+.msg {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Button */
+button {
+  margin-top: 25px;
+  padding: 10px 22px;
+  border: none;
+  background: #d8e3e7;
+  color: #0d1b2a;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+button:hover {
+  background: #ffffff;
+}
+
+/* Hidden Message */
+.hiddenMessage {
+  margin-top: 20px;
+  font-size: 17px;
+  line-height: 1.4;
+  width: 260px;
+  margin-inline: auto;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+
+/* Floating Balloons */
+.balloons span {
+  position: absolute;
+  bottom: -70px;
+  font-size: 35px;
+  opacity: 0.8;
+  animation: rise 7s infinite linear;
+}
+
+.balloons span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.balloons span:nth-child(2) { left: 25%; animation-delay: 1s; }
+.balloons span:nth-child(3) { left: 45%; animation-delay: 2s; }
+.balloons span:nth-child(4) { left: 60%; animation-delay: 3s; }
+.balloons span:nth-child(5) { left: 75%; animation-delay: 4s; }
+.balloons span:nth-child(6) { left: 85%; animation-delay: 5s; }
+
+/* Animations */
+@keyframes rise {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-120vh); }
+}
+
+@keyframes bgShift {
+  0% { background-position: left; }
+  100% { background-position: right; }
+}
