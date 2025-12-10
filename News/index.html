@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Shorts</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <img src="https://imgs.search.brave.com/zAnR_cgC_v7KgwEBsCcb22WI5sGhLXRbxR6Ro5SLEk0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzAvMi9hYmMtbmV3/cy10YWxrLWxvZ28t/cG5nX3NlZWtsb2dv/LTE5MDUucG5n"
+             class="brand-logo" alt="Brand Logo">
+        <span>NEWS SHORTS</span>
+    </div>
+
+    <select id="categorySelect" class="category-select">
+        <option value="">Top Headlines</option>
+        <option value="world">World</option>
+        <option value="nation">Nation</option>
+        <option value="business">Business</option>
+        <option value="technology">Tech</option>
+        <option value="sports">Sports</option>
+        <option value="science">Science</option>
+        <option value="health">Health</option>
+        <option value="entertainment">Entertainment</option>
+    </select>
+</header>
+
+
+<main class="page">
+    <p class="info-banner">
+        Latest Headlines — Powered by Currents News API
+    </p>
+
+    <div id="newsContainer"></div>
+
+    <footer class="footer">
+        © 2025 NewsShorts | All Rights Reserved
+    </footer>
+</main>
+
+<script src="index.js"></script>
+</body>
+</html>

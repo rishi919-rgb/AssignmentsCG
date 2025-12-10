@@ -1,0 +1,245 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+    background: linear-gradient(to bottom, #f3f6fb, #dde6ee);
+    color: #1c2834;
+}
+
+/* NAVBAR */
+.topbar {
+    background: rgba(255, 255, 255, .85);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(200, 210, 220, 0.4);
+    padding: 16px 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+.brand-logo {
+    width: 40px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #354454;
+    font-weight: 600;
+    transition: .25s ease;
+    padding: 6px 0;
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #007aff;
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background: #007aff;
+    border-radius: 2px;
+}
+
+/* PAGE */
+.page {
+    max-width: 850px;
+    margin: 30px auto 60px;
+    padding: 0 16px;
+}
+
+.info-banner {
+    font-size: 14px;
+    background: #007aff11;
+    padding: 8px 12px;
+    color: #007aff;
+    border-left: 4px solid #007aff;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+/* NEWS CARDS */
+.news-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.09);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
+.news-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+    line-height: 1.45;
+}
+
+
+.news-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin: 12px 0;
+    object-fit: cover;
+    background: #eaeaea;
+}
+
+
+.meta {
+    font-size: 12px;
+    color: #627586;
+    margin-bottom: 10px;
+}
+
+.meta span {
+    font-weight: 700;
+    color: #303c48;
+}
+
+/* NEWS BODY */
+.news-body {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: #3a4653;
+}
+
+/* CATEGORY */
+.category {
+    font-size: 13px;
+    font-weight: 600;
+    color: #007aff;
+    padding: 4px 8px;
+    background: #e5f1ff;
+    width: fit-content;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+/* READ MORE */
+.read-more a {
+    font-size: 15px;
+    font-weight: 700;
+    color: #007aff;
+    text-decoration: none;
+}
+
+.read-more a:hover {
+    text-decoration: underline;
+}
+
+/* LOADER / ERROR */
+.loader, .error-msg {
+    padding: 30px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.loader {
+    color: #007aff;
+}
+.error-msg {
+    color: #d90429;
+}
+
+/* ANIMATIONS */
+.fade {
+    animation: fadeIn .45s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    font-size: 13px;
+    padding: 22px;
+    color: #556270;
+    opacity: .9;
+    background: transparent;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+    }
+    .page {
+        margin-top: 15px;
+    }
+    .brand span {
+        font-size: 18px;
+    }
+}
+
+
+.category-select {
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid #d0d5de;
+    background: #ffffff;
+    cursor: pointer;
+    color: #172B4D;
+    transition: .2s;
+}
+
+.category-select:hover {
+    border-color: #007aff;
+}
+
+.category-select:focus {
+    outline: none;
+    border-color: #007aff;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.4);
+}
